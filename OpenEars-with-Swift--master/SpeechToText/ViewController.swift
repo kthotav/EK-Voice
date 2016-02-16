@@ -144,7 +144,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     
     func addWords() {
         //add any thing here that you want to be recognized. Must be in capital letters
-        var str = "Items in a Dictionary may not necessarily be iterated in the same order as they were inserted. The contents of a Dictionary are inherently unordered, and iterating over them does not guarantee the order in which they will be retrieved"
+        var str = "White male admitted ambulant from GI clinic with diagnosis epigastric pain. Complains of mild pain at present. No acure distress. Schedule for elective surgery."
           words  = str.componentsSeparatedByString(" ")
 //        print(myArray)
 //        for i in myArray {
