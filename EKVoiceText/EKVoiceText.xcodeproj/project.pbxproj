@@ -21,6 +21,7 @@
 		25FD58B41C73DCC100774526 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FD58B31C73DCC100774526 /* Slt.framework */; };
 		25FD58B61C73DD4C00774526 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */; };
 		25FD58B81C73DD5D00774526 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */; };
+		25FD58BB1C73F60500774526 /* RapidEarsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FD58BA1C73F60500774526 /* RapidEarsDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelEnglish.bundle; path = EKVoiceText/Framework/AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelSpanish.bundle; path = EKVoiceText/Framework/AcousticModelSpanish.bundle; sourceTree = "<group>"; };
 		25FD58B91C73DE8700774526 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		25FD58BA1C73F60500774526 /* RapidEarsDemo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RapidEarsDemo.framework; path = EKVoiceText/Framework/RapidEarsDemo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25FD58BB1C73F60500774526 /* RapidEarsDemo.framework in Frameworks */,
 				25FD58B41C73DCC100774526 /* Slt.framework in Frameworks */,
 				25FD58B21C73DCA800774526 /* OpenEars.framework in Frameworks */,
 				25FD58AE1C73DAC400774526 /* CoreGraphics.framework in Frameworks */,
@@ -82,6 +85,7 @@
 		25FD587B1C73D6A100774526 = {
 			isa = PBXGroup;
 			children = (
+				25FD58BA1C73F60500774526 /* RapidEarsDemo.framework */,
 				25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */,
 				25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */,
 				25FD58B31C73DCC100774526 /* Slt.framework */,

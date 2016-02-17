@@ -34,41 +34,16 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
 
     
     @IBAction func record(sender: AnyObject) {
-        
-        if !buttonFlashing {
-//            startFlashingbutton()
-            startListening()
-        } else {
-//            stopFlashingbutton()
-            stopListening()
-        }
+        startListening()
+
         
     }
     
-//    func startFlashingbutton() {
-//        
-//        buttonFlashing = true
-//       // recordButton.alpha = 1
-//        
-//        UIView.animateWithDuration(0.5 , delay: 0.0, options: [UIViewAnimationOptions.CurveEaseInOut, UIViewAnimationOptions.Repeat, UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.AllowUserInteraction], animations: {
-//            
-//            // self.recordButton.alpha = 0.1
-//            
-//            }, completion: {Bool in
-//        })
-//    }
-//    
-//    func stopFlashingbutton() {
-//        
-//        buttonFlashing = false
-//        
-//        UIView.animateWithDuration(0.1, delay: 0.0, options: [UIViewAnimationOptions.CurveEaseInOut, UIViewAnimationOptions.BeginFromCurrentState], animations: {
-//            
-//            self.recordButton.alpha = 1
-//            
-//            }, completion: {Bool in
-//        })
-//    }
+    @IBAction func stop(sender: AnyObject) {
+       stopListening()
+    }
+
+    
     //OpenEars methods begin
     
     func loadOpenEars() {
@@ -139,6 +114,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     func startListening() {
         //        OEPocketsphinxController.sharedInstance().setActive(true, error:nil)
         OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+        
     }
     
     func stopListening() {
@@ -195,7 +171,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
         
-        heardTextView.text = "Heard: \(hypothesis)"
+        heardTextView.text = "\(heardTextView.text) \(hypothesis)"
     }
 }
 
