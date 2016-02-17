@@ -20,7 +20,6 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     var openEarsEventsObserver = OEEventsObserver()
     var startupFailedDueToLackOfPermissions = Bool()
     
-    var buttonFlashing = false
     
     @IBOutlet weak var heardTextView: UITextView!
     @IBOutlet weak var statusTextView: UITextView!
@@ -123,7 +122,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     
     func addWords() {
         //add any thing here that you want to be recognized. Must be in capital letters
-        let str = "White male admitted ambulant from GI clinic with diagnosis epigastric pain. Complains of mild pain at present. No acure distress. Schedule for elective surgery."
+        let str = "White male is sad. His age is 50. Middle age crisis."
         
         words  = str.componentsSeparatedByString(" ")
         //        print(myArray)
