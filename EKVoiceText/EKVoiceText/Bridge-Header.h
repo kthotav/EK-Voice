@@ -13,6 +13,8 @@
 //#endif /* Bridge_Header_h */
 
 
+#import <OpenEars/OEEventsObserver.h>
+#import <RapidEarsDemo/OEEventsObserver+RapidEars.h>
 #import <OpenEars/OELanguageModelGenerator.h>
 #import <OpenEars/OEAcousticModel.h>
 #import <OpenEars/OEPocketsphinxController.h>

@@ -376,6 +376,7 @@
 				);
 				INFOPLIST_FILE = EKVoiceText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Karthik/GoogleDrive/GitHub/kthotav/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
@@ -393,6 +394,7 @@
 				);
 				INFOPLIST_FILE = EKVoiceText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Karthik/GoogleDrive/GitHub/kthotav/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
