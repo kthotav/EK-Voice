@@ -15,7 +15,7 @@ var currentWord: String!
 
 var kLevelUpdatesPerSecond = 18
 
-class ViewController: UIViewController, OEEventsObserverDelegate {
+class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDelegate {
 
     var openEarsEventsObserver = OEEventsObserver()
     var startupFailedDueToLackOfPermissions = Bool()
@@ -202,6 +202,13 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
         
         heardTextView.text = "\(heardTextView.text) \(hypothesis)"
     }
+    
+    // close keyboard on touch
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+
 }
 
 
