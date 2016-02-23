@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253D99101C7A7EA000E1EB0D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */; };
+		253D99121C7A870500E1EB0D /* NetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D99111C7A870500E1EB0D /* NetworkCheck.swift */; };
 		25FD58881C73D6A100774526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD58871C73D6A100774526 /* AppDelegate.swift */; };
 		25FD588A1C73D6A100774526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD58891C73D6A100774526 /* ViewController.swift */; };
 		25FD588D1C73D6A100774526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25FD588B1C73D6A100774526 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		253D99111C7A870500E1EB0D /* NetworkCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCheck.swift; sourceTree = "<group>"; };
 		25FD58841C73D6A100774526 /* EKVoiceText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKVoiceText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FD58871C73D6A100774526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25FD58891C73D6A100774526 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				25FD58901C73D6A100774526 /* LaunchScreen.storyboard */,
 				25FD58931C73D6A100774526 /* Info.plist */,
 				25FD58B91C73DE8700774526 /* Bridge-Header.h */,
+				253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */,
+				253D99111C7A870500E1EB0D /* NetworkCheck.swift */,
 			);
 			path = EKVoiceText;
 			sourceTree = "<group>";
@@ -237,6 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253D99101C7A7EA000E1EB0D /* SecondViewController.swift in Sources */,
+				253D99121C7A870500E1EB0D /* NetworkCheck.swift in Sources */,
 				25FD588A1C73D6A100774526 /* ViewController.swift in Sources */,
 				25FD58881C73D6A100774526 /* AppDelegate.swift in Sources */,
 			);

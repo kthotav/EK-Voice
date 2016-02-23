@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 var lmPath: String!
 var dicPath: String!
 var words: Array<String> = []
