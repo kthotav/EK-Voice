@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITableViewDelegate {
     
-    @IBOutlet weak var webView: UIWebView!
+    let navigationItems = ["Home", "Appointments", "Cases", "CommCenter", "Contacts", "Medical Data", "My Account"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +22,22 @@ class SecondViewController: UIViewController {
             print("Internet connection FAILED")
             // display in alert view
         }
-       
-        let url = NSURL(string:"https://www.datacareservices.com/dcarecorp")!
-        webView.loadRequest(NSURLRequest(URL: url))
-        
-    }
 
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return navigationItems.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
+        
+         cell.textLabel?.text = navigationItems[indexPath.row]
+        
+        return cell
+    }
+    
+    
+
+  
 }
