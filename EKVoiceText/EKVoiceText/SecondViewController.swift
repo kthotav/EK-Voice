@@ -24,19 +24,19 @@ class SecondViewController: UIViewController, UITableViewDelegate {
         }
 
     }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return navigationItems.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
-        
-         cell.textLabel?.text = navigationItems[indexPath.row]
-        
-        return cell
-    }
-    
+//    
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return navigationItems.count
+//    }
+//    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
+//        
+//         cell.textLabel?.text = navigationItems[indexPath.row]
+//        
+//        return cell
+//    }
+//    
     
 
   
