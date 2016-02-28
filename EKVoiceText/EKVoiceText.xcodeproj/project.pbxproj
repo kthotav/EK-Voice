@@ -90,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2583E4851C83BA0500232BA3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */,
+				253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */,
+				252E28CD1C82670900B2C560 /* ThirdViewControler.swift */,
+				25FD58891C73D6A100774526 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		25FD587B1C73D6A100774526 = {
 			isa = PBXGroup;
 			children = (
@@ -121,16 +132,13 @@
 			isa = PBXGroup;
 			children = (
 				25FD58871C73D6A100774526 /* AppDelegate.swift */,
-				25FD58891C73D6A100774526 /* ViewController.swift */,
+				2583E4851C83BA0500232BA3 /* Controllers */,
 				25FD588B1C73D6A100774526 /* Main.storyboard */,
 				25FD588E1C73D6A100774526 /* Assets.xcassets */,
 				25FD58901C73D6A100774526 /* LaunchScreen.storyboard */,
 				25FD58931C73D6A100774526 /* Info.plist */,
 				25FD58B91C73DE8700774526 /* Bridge-Header.h */,
-				253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */,
 				253D99111C7A870500E1EB0D /* NetworkCheck.swift */,
-				25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */,
-				252E28CD1C82670900B2C560 /* ThirdViewControler.swift */,
 			);
 			path = EKVoiceText;
 			sourceTree = "<group>";
