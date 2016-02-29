@@ -156,30 +156,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDele
         let str = "word ACL ACOEM ADE ADL AME AMEs AOE Abilify Aciphex Actiq Adderall Adelus Adson Advair Agilent Agrylin Aguilar Albuterol Alto Ambien Amitriptyline Androgel Anexia Ankylosing Antivert Arrhythmics Arthrotec Asthmacort Atenolol Ativan Avandamet Avandia Avenox Avinza Axert Azmacort Babinski Baclofen Belsky Benicar Bextra Biofreeze Bisacodyl Botox Botulinum BuSpar COE CPM CPT CRPS CSF CTDs CTS Celebrex Celexa Cerebellar Chitnis Clarinex Clinoril Clonazepam Compazine Concentra Concerta Contin Coumadin Cozaar Crestor Crohn's Cymbalta Cystometrograms DDD DPM DTR Danskin Darvocet Darvon Daypro Deafferentation Deboer Decadron Desyrel Detrol Devor DexAlone Dilaudid Diovan Disalcid Ditropan DonJoy Dosepak Duragesic Durgesic Dyazide Dynamometer Dynasplint EK EMG EMGs ESI Effexor Elavil Electroceutical Electrodiagnosis Electromyographer Epiphysitis Esgic Estrace FRP Feinberg Feldene Feldenkrais Fentanyl Fibromyalgia Finkelstein Finkelstein's Fioricet Fiorinal Flonase Frova GERD Gabapentin Gabitril Gastroesophageal Genzyme Glucophage HealthSouth HealthWorks Hyalgan Hydrocodone Hydrodiuril ICD IM IW Imitrex Intraspinal Ipratropium Jamar Kaiser Klonopin LESI Lamictal Lasix Levitra Levorphanol Levothyroid Levoxyl Lexapro Lidoderm Limbrel Lipitor Lodine Lofstrand Lorcet Lortab Lotensin Lotronex Luvox MDA MRI MRIs Marinol Maxalt MediCal Medrol Mendenhall Mexiletine Micronase Microvasive Midrin Migrazone MiraLax Mirapex Mobic Monopril Motrin Mumford Myobloc NCS NCV NSAIDS Nabumetone Namenda Naprosyn Natividad Neuromodulation Neurontin Norco Nortriptyline Norvasc ODG Olanzapine Oramorph Orthotripsy Oruvail OssaTron Oxcarbazepine OxyCodone OxyContin OxyIR Oxytrol Palladone Palletizer Palmomental Pamelor Parafon Parente Paxil Percocet Percodan Permanente Phalen's Phenergan Plaquenil Plaxo Pleasanton Polyneuropathies Prazosin Premarin Prempro Prevacid Prialt Prilosec Procardia Proscar Provigil Pseudoaddiction Psychostimulants QIW QME Quervain's RSD Radiopaque Raynaud's Reglan Relafen Relpax Remeron Robaxin SCIF SSEPT Safeway Senokot Seroquel Serzone Shigella Sinemet Sinequan Sjogren's Skelaxin Spurling's Strattera Suboxone Subutex Synthes Synthroid Synvisc TCFF TTD TTP Tagamet Talwin Tegretol Temazepam TempurPedic Tendonopathy Tenormin"
         
         words  = str.componentsSeparatedByString(" ")
-        //        print(myArray)
-        //        for i in myArray {
-        //            words.append(i)
-        //        }
-        //        words.append("SUNDAY")
-        //        words.append("MONDAY")
-        //        words.append("TUESDAY")
-        //        words.append("WEDNESDAY")
-        //        words.append("THURSDAY")
-        //        words.append("FRIDAY")
-        //        words.append("SATURDAY")
-        //
-        //        words.append("JANUARY")
-        //        words.append("FEBRUARY")
-        //        words.append("MARCH")
-        //        words.append("APRIL")
-        //        words.append("MAY")
-        //        words.append("JUNE")
-        //        words.append("JULY")
-        //        words.append("AUGUST")
-        //        words.append("SEPTEMBER")
-        //        words.append("OCTOBER")
-        //        words.append("NOVEMBER")
-        //        words.append("DECEMBER")
+     
     }
     
     func getNewWord() {
