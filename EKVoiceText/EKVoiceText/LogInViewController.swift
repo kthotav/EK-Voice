@@ -28,7 +28,6 @@ class LogInViewController: UIViewController {
         if userNameField.text == "Karthik" && passwordField.text == "hello123" {
             self.performSegueWithIdentifier("successfulLogin", sender: self)
         }
-        
     }
 
 }
