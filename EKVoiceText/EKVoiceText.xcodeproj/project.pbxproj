@@ -26,6 +26,7 @@
 		25FD58B61C73DD4C00774526 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */; };
 		25FD58B81C73DD5D00774526 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */; };
 		25FD58BB1C73F60500774526 /* RapidEarsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FD58BA1C73F60500774526 /* RapidEarsDemo.framework */; };
+		9A31AD761C8935D800872BF0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A31AD751C8935D800872BF0 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelSpanish.bundle; path = EKVoiceText/Framework/AcousticModelSpanish.bundle; sourceTree = "<group>"; };
 		25FD58B91C73DE8700774526 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		25FD58BA1C73F60500774526 /* RapidEarsDemo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RapidEarsDemo.framework; path = EKVoiceText/Framework/RapidEarsDemo.framework; sourceTree = "<group>"; };
+		9A31AD751C8935D800872BF0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				25FD58901C73D6A100774526 /* LaunchScreen.storyboard */,
 				25FD58931C73D6A100774526 /* Info.plist */,
 				25FD58B91C73DE8700774526 /* Bridge-Header.h */,
+				9A31AD751C8935D800872BF0 /* logo.png */,
 				253D99111C7A870500E1EB0D /* NetworkCheck.swift */,
 			);
 			path = EKVoiceText;
@@ -237,6 +240,7 @@
 			files = (
 				25FD58B81C73DD5D00774526 /* AcousticModelSpanish.bundle in Resources */,
 				25FD58B61C73DD4C00774526 /* AcousticModelEnglish.bundle in Resources */,
+				9A31AD761C8935D800872BF0 /* logo.png in Resources */,
 				25FD58921C73D6A100774526 /* LaunchScreen.storyboard in Resources */,
 				25FD588F1C73D6A100774526 /* Assets.xcassets in Resources */,
 				25FD588D1C73D6A100774526 /* Main.storyboard in Resources */,
@@ -403,7 +407,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Karthik/GoogleDrive/GitHub/kthotav/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lou/Documents/School/ios/VoiceToText/OpenEars-with-Swift--master/SpeechToText/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -421,7 +425,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Karthik/GoogleDrive/GitHub/kthotav/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lou/Documents/School/ios/VoiceToText/OpenEars-with-Swift--master/SpeechToText/Bridging-Header.h";
 			};
 			name = Release;
 		};
