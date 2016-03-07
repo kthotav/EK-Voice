@@ -10,6 +10,7 @@
 		252E28CE1C82670900B2C560 /* ThirdViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E28CD1C82670900B2C560 /* ThirdViewControler.swift */; };
 		253D99101C7A7EA000E1EB0D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */; };
 		253D99121C7A870500E1EB0D /* NetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D99111C7A870500E1EB0D /* NetworkCheck.swift */; };
+		256CC8511C8A8D4500FF953D /* RecentNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CC8501C8A8D4500FF953D /* RecentNotes.swift */; };
 		25BC8BAC1C7EBFA9007F9526 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */; };
 		25FD58881C73D6A100774526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD58871C73D6A100774526 /* AppDelegate.swift */; };
 		25FD588A1C73D6A100774526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD58891C73D6A100774526 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		252E28CD1C82670900B2C560 /* ThirdViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewControler.swift; sourceTree = "<group>"; };
 		253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		253D99111C7A870500E1EB0D /* NetworkCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCheck.swift; sourceTree = "<group>"; };
+		256CC8501C8A8D4500FF953D /* RecentNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentNotes.swift; sourceTree = "<group>"; };
 		25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		25FD58841C73D6A100774526 /* EKVoiceText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKVoiceText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FD58871C73D6A100774526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */,
 				252E28CD1C82670900B2C560 /* ThirdViewControler.swift */,
 				25FD58891C73D6A100774526 /* ViewController.swift */,
+				256CC8501C8A8D4500FF953D /* RecentNotes.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256CC8511C8A8D4500FF953D /* RecentNotes.swift in Sources */,
 				253D99101C7A7EA000E1EB0D /* SecondViewController.swift in Sources */,
 				253D99121C7A870500E1EB0D /* NetworkCheck.swift in Sources */,
 				25FD588A1C73D6A100774526 /* ViewController.swift in Sources */,

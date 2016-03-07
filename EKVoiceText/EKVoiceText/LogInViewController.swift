@@ -26,7 +26,7 @@ class LogInViewController: UIViewController {
     
     @IBAction func logInAction(sender: AnyObject) {
         if userNameField.text == "Karthik" && passwordField.text == "hello123" {
-            self.performSegueWithIdentifier("successfulLogin", sender: self)
+            self.performSegueWithIdentifier("tabViewController", sender: self)
         }
         
     }
