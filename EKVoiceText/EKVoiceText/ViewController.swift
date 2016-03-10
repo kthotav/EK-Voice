@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+
 
 
 var lmPath: String!
@@ -50,6 +52,8 @@ class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDele
         
         // Do any additional setup after loading the view, typically from a nib.
         
+        parseJSON()
+        
         heardTextView.delegate = self
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
@@ -69,6 +73,23 @@ class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDele
         heardTextView.layer.borderColor = borderColor.CGColor
         heardTextView.layer.cornerRadius = 5.0
         
+    }
+    
+    
+    func parseJSON() {
+        
+        if let path = NSBundle.mainBundle().pathForResource("DataCareJSON", ofType: "json")
+        {
+            do{
+                let pathAsData = try NSData(contentsOfFile: path, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                let json = JSON(data: pathAsData)
+                print(json)
+                
+            } catch{
+                print("JSON Data not Parsed!")
+            }
+            
+        }
     }
     
    

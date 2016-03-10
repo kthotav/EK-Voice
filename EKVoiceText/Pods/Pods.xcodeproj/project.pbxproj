@@ -6,43 +6,221 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9B6157A212A9BDA8ABE58255FFB15DC0 /* Pods-EKVoiceText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67307C2CF3D20AFD379E8C97793BB396 /* Pods-EKVoiceText-dummy.m */; };
+		A38A1CFFC677119975E049D64A4DF831 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */; };
+		C0BB6F506A76782456EB4988D1EAA30D /* Pods-EKVoiceText-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A74D631BE3C37B772B53309DF92472 /* Pods-EKVoiceText-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C70FEBB25E0DF495E72A4D65A692C458 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1164EA92D943420FE44F40C7FFB9550 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		E9E9AE26C6D6BB3464999935B1075911 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */; };
+		F3ACD54AFDD3D8C073A57097A6811535 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2922C633C68D00EB08D4ABCFE4B0CEE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DBBC017FE33C55DDA8BA2402806F41C;
+			remoteInfo = SwiftyJSON;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		0DB1A2D933B361F063A6B91177A7337F /* Pods-EKVoiceText-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EKVoiceText-frameworks.sh"; sourceTree = "<group>"; };
+		2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4A44BE8E00822ABCB9A242592583F32F /* Pods-EKVoiceText-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EKVoiceText-resources.sh"; sourceTree = "<group>"; };
+		6224CAC4231581815BCDD124FBC158B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66A74D631BE3C37B772B53309DF92472 /* Pods-EKVoiceText-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EKVoiceText-umbrella.h"; sourceTree = "<group>"; };
+		67307C2CF3D20AFD379E8C97793BB396 /* Pods-EKVoiceText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EKVoiceText-dummy.m"; sourceTree = "<group>"; };
+		82C2A80D0A8C80AE08BD70E84BC4EBA3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B03FA6EE6B21A56E0B9AF5541B6461F /* Pods-EKVoiceText.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EKVoiceText.modulemap"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BBF610E40BDF6E542FA21FF7E5491205 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		BE00999927764A7DB8C255A1BB28FA8F /* Pods-EKVoiceText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EKVoiceText.release.xcconfig"; sourceTree = "<group>"; };
+		C4A9A658C966F6BB111BEDBDEA1F874A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D032A29E584B77AE187E586922267CF5 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		D5AC6A51333C05C04A2545F9D96B3289 /* Pods-EKVoiceText-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EKVoiceText-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EA787A9C872BCABBCA76316934AB4453 /* Pods_EKVoiceText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKVoiceText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5C7A3BD5D66F2432BF8E22E07A48F2 /* Pods-EKVoiceText-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EKVoiceText-acknowledgements.plist"; sourceTree = "<group>"; };
+		FEC091D1F2F908DD1FEC51D265E6ED62 /* Pods-EKVoiceText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EKVoiceText.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		09331C048FC8ECE872513C0F380B9837 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1164EA92D943420FE44F40C7FFB9550 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E7AF6575FF987059AA1659E94CCFCD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3ACD54AFDD3D8C073A57097A6811535 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		09C5E90726D2521A760312DBF50D9358 /* Products */ = {
+		111C3419B3807480375591772954C8C6 /* Pods-EKVoiceText */ = {
 			isa = PBXGroup;
 			children = (
+				6224CAC4231581815BCDD124FBC158B4 /* Info.plist */,
+				8B03FA6EE6B21A56E0B9AF5541B6461F /* Pods-EKVoiceText.modulemap */,
+				D5AC6A51333C05C04A2545F9D96B3289 /* Pods-EKVoiceText-acknowledgements.markdown */,
+				EC5C7A3BD5D66F2432BF8E22E07A48F2 /* Pods-EKVoiceText-acknowledgements.plist */,
+				67307C2CF3D20AFD379E8C97793BB396 /* Pods-EKVoiceText-dummy.m */,
+				0DB1A2D933B361F063A6B91177A7337F /* Pods-EKVoiceText-frameworks.sh */,
+				4A44BE8E00822ABCB9A242592583F32F /* Pods-EKVoiceText-resources.sh */,
+				66A74D631BE3C37B772B53309DF92472 /* Pods-EKVoiceText-umbrella.h */,
+				FEC091D1F2F908DD1FEC51D265E6ED62 /* Pods-EKVoiceText.debug.xcconfig */,
+				BE00999927764A7DB8C255A1BB28FA8F /* Pods-EKVoiceText.release.xcconfig */,
 			);
-			name = Products;
+			name = "Pods-EKVoiceText";
+			path = "Target Support Files/Pods-EKVoiceText";
 			sourceTree = "<group>";
 		};
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		70A8E4D3C62B6C203D238581DA091C21 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
+				BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */,
+				8EC39E1DC11846207722B71AAFE40F98 /* Support Files */,
 			);
-			name = Frameworks;
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				09C5E90726D2521A760312DBF50D9358 /* Products */,
-				F6CCA5D896907CE7506C37FD31FC265A /* Targets Support Files */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				BD1E3C710F12F4B4C092FC8E2AD22110 /* Pods */,
+				D62F964C2BEA2B9AEF1E1C32C2AEC889 /* Products */,
+				CD2BD32F63F0CC4E80D3A3C9A23E2727 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F6CCA5D896907CE7506C37FD31FC265A /* Targets Support Files */ = {
+		8EC39E1DC11846207722B71AAFE40F98 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4A9A658C966F6BB111BEDBDEA1F874A /* Info.plist */,
+				D032A29E584B77AE187E586922267CF5 /* SwiftyJSON.modulemap */,
+				2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */,
+				32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */,
+				BBF610E40BDF6E542FA21FF7E5491205 /* SwiftyJSON-prefix.pch */,
+				05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD1E3C710F12F4B4C092FC8E2AD22110 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70A8E4D3C62B6C203D238581DA091C21 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CD2BD32F63F0CC4E80D3A3C9A23E2727 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				111C3419B3807480375591772954C8C6 /* Pods-EKVoiceText */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		D62F964C2BEA2B9AEF1E1C32C2AEC889 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA787A9C872BCABBCA76316934AB4453 /* Pods_EKVoiceText.framework */,
+				82C2A80D0A8C80AE08BD70E84BC4EBA3 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		30F998A1979AAE0B3DD69FCC71787AFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70FEBB25E0DF495E72A4D65A692C458 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6857F9CD0C0A8BC9E756BC648FB4A76F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0BB6F506A76782456EB4988D1EAA30D /* Pods-EKVoiceText-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A3510510F5F774C9637D1A3C6C8E52D /* Pods-EKVoiceText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC4FBA8B66BC9675362E62B4EEFF67C /* Build configuration list for PBXNativeTarget "Pods-EKVoiceText" */;
+			buildPhases = (
+				B688574148D2CC393A8257736C80255F /* Sources */,
+				09331C048FC8ECE872513C0F380B9837 /* Frameworks */,
+				6857F9CD0C0A8BC9E756BC648FB4A76F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1AE3A8460185468502266EFE7545DD9 /* PBXTargetDependency */,
+			);
+			name = "Pods-EKVoiceText";
+			productName = "Pods-EKVoiceText";
+			productReference = EA787A9C872BCABBCA76316934AB4453 /* Pods_EKVoiceText.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3DBBC017FE33C55DDA8BA2402806F41C /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F4036214872E55AB40B3A3C15FA3B26 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				109680258294612487E85F0A53959E9D /* Sources */,
+				9E7AF6575FF987059AA1659E94CCFCD3 /* Frameworks */,
+				30F998A1979AAE0B3DD69FCC71787AFC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 82C2A80D0A8C80AE08BD70E84BC4EBA3 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
@@ -59,15 +237,76 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 09C5E90726D2521A760312DBF50D9358 /* Products */;
+			productRefGroup = D62F964C2BEA2B9AEF1E1C32C2AEC889 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				1A3510510F5F774C9637D1A3C6C8E52D /* Pods-EKVoiceText */,
+				3DBBC017FE33C55DDA8BA2402806F41C /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		109680258294612487E85F0A53959E9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9E9AE26C6D6BB3464999935B1075911 /* SwiftyJSON-dummy.m in Sources */,
+				A38A1CFFC677119975E049D64A4DF831 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B688574148D2CC393A8257736C80255F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B6157A212A9BDA8ABE58255FFB15DC0 /* Pods-EKVoiceText-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1AE3A8460185468502266EFE7545DD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 3DBBC017FE33C55DDA8BA2402806F41C /* SwiftyJSON */;
+			targetProxy = 2922C633C68D00EB08D4ABCFE4B0CEE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0CC4E4575169914E71849A8CC50E1B19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE00999927764A7DB8C255A1BB28FA8F /* Pods-EKVoiceText.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EKVoiceText/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EKVoiceText/Pods-EKVoiceText.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_EKVoiceText;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -104,6 +343,92 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D8413E013288CAD13BEF50967FD7CFB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA657C45B1AA81EBBABBFAA945AE1BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA8AF1808AD44BBF92336BC81F7A97C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEC091D1F2F908DD1FEC51D265E6ED62 /* Pods-EKVoiceText.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EKVoiceText/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EKVoiceText/Pods-EKVoiceText.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_EKVoiceText;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -149,6 +474,24 @@
 			buildConfigurations = (
 				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
 				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F4036214872E55AB40B3A3C15FA3B26 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8413E013288CAD13BEF50967FD7CFB4 /* Debug */,
+				DA657C45B1AA81EBBABBFAA945AE1BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBC4FBA8B66BC9675362E62B4EEFF67C /* Build configuration list for PBXNativeTarget "Pods-EKVoiceText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA8AF1808AD44BBF92336BC81F7A97C9 /* Debug */,
+				0CC4E4575169914E71849A8CC50E1B19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
