@@ -16,21 +16,53 @@ var currentWord: String!
 
 var kLevelUpdatesPerSecond = 18
 
+var kbHeight: CGFloat!
+
 class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDelegate {
 
+    @IBOutlet weak var segementController: UISegmentedControl!
+   
+    @IBOutlet weak var demographicsView: UIView!
+    
+    @IBOutlet weak var contactView: UIView!
+   
+    
+    @IBOutlet weak var recentNotesView: UIView!
+    
+    
+    
+    
+    
+    @IBOutlet weak var offlineSpeechSwitch: UISwitch!
+    
     var openEarsEventsObserver = OEEventsObserver()
     var startupFailedDueToLackOfPermissions = Bool()
     
-
     @IBOutlet weak var heardTextView: UITextView!
+    
     
    
     
-    @IBOutlet weak var statusLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        
+        heardTextView.delegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        
+    
+        
+        self.contactView.hidden = true
+        self.recentNotesView.hidden = true
+        
+        
+        
+        
         loadOpenEars()
         let borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
         heardTextView.layer.borderWidth = 0.5
@@ -39,13 +71,24 @@ class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDele
         
     }
     
-    @IBAction func record(sender: AnyObject) {
-        startListening()
+   
+    
+    
+    
+    
+    @IBAction func offlineSpeechPressed(sender: AnyObject) {
+        
+        if offlineSpeechSwitch.on {
+            startListening()
+        }
+        else {
+            stopListening()
+        }
+        
     }
     
-    @IBAction func stop(sender: AnyObject) {
-        stopListening()
-    }
+    
+
 
     
     
@@ -71,32 +114,32 @@ class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDele
     
     func pocketsphinxDidStartListening() {
         print("Pocketsphinx is now listening.")
-        statusLabel.text = "Pocketsphinx is now listening."
+        
     }
     
     func pocketsphinxDidDetectSpeech() {
         print("Pocketsphinx has detected speech.")
-        statusLabel.text = "Pocketsphinx has detected speech."
+       
     }
     
     func pocketsphinxDidDetectFinishedSpeech() {
         print("Pocketsphinx has detected a period of silence, concluding an utterance.")
-        statusLabel.text = "Pocketsphinx has detected a period of silence, concluding an utterance."
+        
     }
     
     func pocketsphinxDidStopListening() {
         print("Pocketsphinx has stopped listening.")
-        statusLabel.text = "Pocketsphinx has stopped listening."
+        
     }
     
     func pocketsphinxDidSuspendRecognition() {
         print("Pocketsphinx has suspended recognition.")
-        statusLabel.text = "Pocketsphinx has suspended recognition."
+        
     }
     
     func pocketsphinxDidResumeRecognition() {
         print("Pocketsphinx has resumed recognition.")
-        statusLabel.text = "Pocketsphinx has resumed recognition."
+        
     }
     
     func pocketsphinxDidChangeLanguageModelToFile(newLanguageModelPathAsString: String, newDictionaryPathAsString: String) {
@@ -105,17 +148,17 @@ class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDele
     
     func pocketSphinxContinuousSetupDidFailWithReason(reasonForFailure: String) {
         print("Listening setup wasn't successful and returned the failure reason: \(reasonForFailure)")
-        statusLabel.text = "Listening setup wasn't successful and returned the failure reason: \(reasonForFailure)"
+        
     }
     
     func pocketSphinxContinuousTeardownDidFailWithReason(reasonForFailure: String) {
         print("Listening teardown wasn't successful and returned the failure reason: \(reasonForFailure)")
-        statusLabel.text = "Listening teardown wasn't successful and returned the failure reason: \(reasonForFailure)"
+        
     }
     
     func testRecognitionCompleted() {
         print("A test file that was submitted for recognition is now complete.")
-        statusLabel.text = "A test file that was submitted for recognition is now complete."
+        
     }
     
 //    func rapidEarsDidReceiveLiveSpeechHypothesis(hypothesis: String, recognitionScore: String) {
@@ -181,11 +224,50 @@ class ViewController: UIViewController, OEEventsObserverDelegate, UITextViewDele
         heardTextView.text = "\(heardTextView.text) \(hypothesis)"
     }
     
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y -= keyboardSize.height
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            self.view.frame.origin.y += keyboardSize.height
+        }
+    }
+
+    
     // close keyboard on touch
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    @IBAction func segementValue(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.demographicsView.hidden = false
+            self.contactView.hidden = true
+            self.recentNotesView.hidden = true
+        case 1:
+            self.demographicsView.hidden = true
+            self.contactView.hidden = false
+            self.recentNotesView.hidden = true
+        case 2:
+            self.recentNotesView.hidden = false
+            self.demographicsView.hidden = true
+            self.contactView.hidden = true
+        default:
+            break
+        }
+    }
+    
+
+    
+    
+
 
 }
 
