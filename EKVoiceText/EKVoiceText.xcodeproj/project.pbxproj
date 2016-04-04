@@ -7,11 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251FCF661CA21F3C00F9421D /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF5A1CA21F3C00F9421D /* AkiraTextField.swift */; };
+		251FCF671CA21F3C00F9421D /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF5B1CA21F3C00F9421D /* HoshiTextField.swift */; };
+		251FCF681CA21F3C00F9421D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 251FCF5C1CA21F3C00F9421D /* Info.plist */; };
+		251FCF691CA21F3C00F9421D /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF5D1CA21F3C00F9421D /* IsaoTextField.swift */; };
+		251FCF6A1CA21F3C00F9421D /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF5E1CA21F3C00F9421D /* JiroTextField.swift */; };
+		251FCF6B1CA21F3C00F9421D /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF5F1CA21F3C00F9421D /* KaedeTextField.swift */; };
+		251FCF6C1CA21F3C00F9421D /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF601CA21F3C00F9421D /* MadokaTextField.swift */; };
+		251FCF6D1CA21F3C00F9421D /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF611CA21F3C00F9421D /* MinoruTextField.swift */; };
+		251FCF6E1CA21F3C00F9421D /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF631CA21F3C00F9421D /* TextFieldsEffects.swift */; };
+		251FCF6F1CA21F3C00F9421D /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF641CA21F3C00F9421D /* YokoTextField.swift */; };
+		251FCF701CA21F3C00F9421D /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FCF651CA21F3C00F9421D /* YoshikoTextField.swift */; };
+		251FCF761CA2535700F9421D /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251FCF751CA2535700F9421D /* LocalAuthentication.framework */; };
+		2529FDBC1CAC40D70077980D /* DataCareJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 2529FDBB1CAC40D70077980D /* DataCareJSON.json */; };
+		2529FDBE1CAC42E70077980D /* CasesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2529FDBD1CAC42E70077980D /* CasesListTableViewController.swift */; };
 		252E28CE1C82670900B2C560 /* ThirdViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252E28CD1C82670900B2C560 /* ThirdViewControler.swift */; };
 		253D99101C7A7EA000E1EB0D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */; };
 		253D99121C7A870500E1EB0D /* NetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D99111C7A870500E1EB0D /* NetworkCheck.swift */; };
 		256CC8511C8A8D4500FF953D /* RecentNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CC8501C8A8D4500FF953D /* RecentNotes.swift */; };
+		257476731CB1930100EC2D77 /* ClientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476721CB1930100EC2D77 /* ClientDetailViewController.swift */; };
+		257476771CB2062C00EC2D77 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476761CB2062C00EC2D77 /* NotesTableViewController.swift */; };
 		25BC8BAC1C7EBFA9007F9526 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */; };
+		25D85B801CB3245900FD1250 /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */; };
 		25FD58881C73D6A100774526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD58871C73D6A100774526 /* AppDelegate.swift */; };
 		25FD588A1C73D6A100774526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD58891C73D6A100774526 /* ViewController.swift */; };
 		25FD588D1C73D6A100774526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25FD588B1C73D6A100774526 /* Main.storyboard */; };
@@ -26,7 +43,7 @@
 		25FD58B41C73DCC100774526 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FD58B31C73DCC100774526 /* Slt.framework */; };
 		25FD58B61C73DD4C00774526 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */; };
 		25FD58B81C73DD5D00774526 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */; };
-		25FD58BB1C73F60500774526 /* RapidEarsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FD58BA1C73F60500774526 /* RapidEarsDemo.framework */; };
+		30FE4741E9C46792CDE742F3 /* Pods_EKVoiceText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264B7FF5205C50C4D0E965F /* Pods_EKVoiceText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +57,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03194D13ACBEDA1AF48726DB /* Pods-EKVoiceText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKVoiceText.release.xcconfig"; path = "Pods/Target Support Files/Pods-EKVoiceText/Pods-EKVoiceText.release.xcconfig"; sourceTree = "<group>"; };
+		251FCF5A1CA21F3C00F9421D /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
+		251FCF5B1CA21F3C00F9421D /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		251FCF5C1CA21F3C00F9421D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		251FCF5D1CA21F3C00F9421D /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		251FCF5E1CA21F3C00F9421D /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
+		251FCF5F1CA21F3C00F9421D /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		251FCF601CA21F3C00F9421D /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
+		251FCF611CA21F3C00F9421D /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
+		251FCF621CA21F3C00F9421D /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		251FCF631CA21F3C00F9421D /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsEffects.swift; sourceTree = "<group>"; };
+		251FCF641CA21F3C00F9421D /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
+		251FCF651CA21F3C00F9421D /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		251FCF751CA2535700F9421D /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		2529FDBB1CAC40D70077980D /* DataCareJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataCareJSON.json; sourceTree = "<group>"; };
+		2529FDBD1CAC42E70077980D /* CasesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasesListTableViewController.swift; sourceTree = "<group>"; };
 		252E28CD1C82670900B2C560 /* ThirdViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewControler.swift; sourceTree = "<group>"; };
 		253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		253D99111C7A870500E1EB0D /* NetworkCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCheck.swift; sourceTree = "<group>"; };
 		256CC8501C8A8D4500FF953D /* RecentNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentNotes.swift; sourceTree = "<group>"; };
+		257476721CB1930100EC2D77 /* ClientDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailViewController.swift; sourceTree = "<group>"; };
+		257476761CB2062C00EC2D77 /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
 		25FD58841C73D6A100774526 /* EKVoiceText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKVoiceText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FD58871C73D6A100774526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25FD58891C73D6A100774526 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +100,8 @@
 		25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelEnglish.bundle; path = EKVoiceText/Framework/AcousticModelEnglish.bundle; sourceTree = "<group>"; };
 		25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AcousticModelSpanish.bundle; path = EKVoiceText/Framework/AcousticModelSpanish.bundle; sourceTree = "<group>"; };
 		25FD58B91C73DE8700774526 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
-		25FD58BA1C73F60500774526 /* RapidEarsDemo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RapidEarsDemo.framework; path = EKVoiceText/Framework/RapidEarsDemo.framework; sourceTree = "<group>"; };
+		29C04329E4323483585E9D63 /* Pods-EKVoiceText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKVoiceText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EKVoiceText/Pods-EKVoiceText.debug.xcconfig"; sourceTree = "<group>"; };
+		3264B7FF5205C50C4D0E965F /* Pods_EKVoiceText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKVoiceText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +109,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25FD58BB1C73F60500774526 /* RapidEarsDemo.framework in Frameworks */,
+				251FCF761CA2535700F9421D /* LocalAuthentication.framework in Frameworks */,
 				25FD58B41C73DCC100774526 /* Slt.framework in Frameworks */,
 				25FD58B21C73DCA800774526 /* OpenEars.framework in Frameworks */,
 				25FD58AE1C73DAC400774526 /* CoreGraphics.framework in Frameworks */,
 				25FD58AC1C73DABB00774526 /* UIKit.framework in Frameworks */,
 				25FD58AA1C73D85A00774526 /* AudioToolbox.framework in Frameworks */,
 				25FD58A81C73D80900774526 /* AVFoundation.framework in Frameworks */,
+				30FE4741E9C46792CDE742F3 /* Pods_EKVoiceText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +130,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		251FCF721CA23C5800F9421D /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				251FCF5A1CA21F3C00F9421D /* AkiraTextField.swift */,
+				251FCF5B1CA21F3C00F9421D /* HoshiTextField.swift */,
+				251FCF5C1CA21F3C00F9421D /* Info.plist */,
+				251FCF5D1CA21F3C00F9421D /* IsaoTextField.swift */,
+				251FCF5E1CA21F3C00F9421D /* JiroTextField.swift */,
+				251FCF5F1CA21F3C00F9421D /* KaedeTextField.swift */,
+				251FCF601CA21F3C00F9421D /* MadokaTextField.swift */,
+				251FCF611CA21F3C00F9421D /* MinoruTextField.swift */,
+				251FCF621CA21F3C00F9421D /* TextFieldEffects.h */,
+				251FCF631CA21F3C00F9421D /* TextFieldsEffects.swift */,
+				251FCF641CA21F3C00F9421D /* YokoTextField.swift */,
+				251FCF651CA21F3C00F9421D /* YoshikoTextField.swift */,
+			);
+			name = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		251FCF771CA2536900F9421D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				251FCF751CA2535700F9421D /* LocalAuthentication.framework */,
+				25FD58B31C73DCC100774526 /* Slt.framework */,
+				25FD58B11C73DCA800774526 /* OpenEars.framework */,
+				25FD58AD1C73DAC400774526 /* CoreGraphics.framework */,
+				25FD58AB1C73DABB00774526 /* UIKit.framework */,
+				25FD58A91C73D85A00774526 /* AudioToolbox.framework */,
+				25FD58A71C73D80900774526 /* AVFoundation.framework */,
+				3264B7FF5205C50C4D0E965F /* Pods_EKVoiceText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		251FCF781CA2538300F9421D /* AcousticModel */ = {
+			isa = PBXGroup;
+			children = (
+				25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */,
+				25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */,
+			);
+			name = AcousticModel;
+			sourceTree = "<group>";
+		};
 		2583E4851C83BA0500232BA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +181,10 @@
 				252E28CD1C82670900B2C560 /* ThirdViewControler.swift */,
 				25FD58891C73D6A100774526 /* ViewController.swift */,
 				256CC8501C8A8D4500FF953D /* RecentNotes.swift */,
+				2529FDBD1CAC42E70077980D /* CasesListTableViewController.swift */,
+				257476721CB1930100EC2D77 /* ClientDetailViewController.swift */,
+				257476761CB2062C00EC2D77 /* NotesTableViewController.swift */,
+				25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -107,18 +192,13 @@
 		25FD587B1C73D6A100774526 = {
 			isa = PBXGroup;
 			children = (
-				25FD58BA1C73F60500774526 /* RapidEarsDemo.framework */,
-				25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */,
-				25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */,
-				25FD58B31C73DCC100774526 /* Slt.framework */,
-				25FD58B11C73DCA800774526 /* OpenEars.framework */,
-				25FD58AD1C73DAC400774526 /* CoreGraphics.framework */,
-				25FD58AB1C73DABB00774526 /* UIKit.framework */,
-				25FD58A91C73D85A00774526 /* AudioToolbox.framework */,
-				25FD58A71C73D80900774526 /* AVFoundation.framework */,
+				251FCF781CA2538300F9421D /* AcousticModel */,
+				251FCF771CA2536900F9421D /* Frameworks */,
 				25FD58861C73D6A100774526 /* EKVoiceText */,
 				25FD589B1C73D6A100774526 /* EKVoiceTextTests */,
 				25FD58851C73D6A100774526 /* Products */,
+				251FCF721CA23C5800F9421D /* TextFieldEffects */,
+				B8BDC00700A06DC07074A0D2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +222,7 @@
 				25FD58931C73D6A100774526 /* Info.plist */,
 				25FD58B91C73DE8700774526 /* Bridge-Header.h */,
 				253D99111C7A870500E1EB0D /* NetworkCheck.swift */,
+				2529FDBB1CAC40D70077980D /* DataCareJSON.json */,
 			);
 			path = EKVoiceText;
 			sourceTree = "<group>";
@@ -155,6 +236,15 @@
 			path = EKVoiceTextTests;
 			sourceTree = "<group>";
 		};
+		B8BDC00700A06DC07074A0D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29C04329E4323483585E9D63 /* Pods-EKVoiceText.debug.xcconfig */,
+				03194D13ACBEDA1AF48726DB /* Pods-EKVoiceText.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25FD58A11C73D6A200774526 /* Build configuration list for PBXNativeTarget "EKVoiceText" */;
 			buildPhases = (
+				1D72D1D75CCFA54AC7055244 /* Check Pods Manifest.lock */,
 				25FD58801C73D6A100774526 /* Sources */,
 				25FD58811C73D6A100774526 /* Frameworks */,
 				25FD58821C73D6A100774526 /* Resources */,
+				CF153C2E9708B59749593A0F /* Embed Pods Frameworks */,
+				0B4F1FEC6124486184843A2C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +333,8 @@
 			files = (
 				25FD58B81C73DD5D00774526 /* AcousticModelSpanish.bundle in Resources */,
 				25FD58B61C73DD4C00774526 /* AcousticModelEnglish.bundle in Resources */,
+				2529FDBC1CAC40D70077980D /* DataCareJSON.json in Resources */,
+				251FCF681CA21F3C00F9421D /* Info.plist in Resources */,
 				25FD58921C73D6A100774526 /* LaunchScreen.storyboard in Resources */,
 				25FD588F1C73D6A100774526 /* Assets.xcassets in Resources */,
 				25FD588D1C73D6A100774526 /* Main.storyboard in Resources */,
@@ -255,18 +350,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B4F1FEC6124486184843A2C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EKVoiceText/Pods-EKVoiceText-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D72D1D75CCFA54AC7055244 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF153C2E9708B59749593A0F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EKVoiceText/Pods-EKVoiceText-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25FD58801C73D6A100774526 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				257476731CB1930100EC2D77 /* ClientDetailViewController.swift in Sources */,
+				251FCF671CA21F3C00F9421D /* HoshiTextField.swift in Sources */,
+				2529FDBE1CAC42E70077980D /* CasesListTableViewController.swift in Sources */,
+				251FCF661CA21F3C00F9421D /* AkiraTextField.swift in Sources */,
 				256CC8511C8A8D4500FF953D /* RecentNotes.swift in Sources */,
 				253D99101C7A7EA000E1EB0D /* SecondViewController.swift in Sources */,
+				251FCF6E1CA21F3C00F9421D /* TextFieldsEffects.swift in Sources */,
 				253D99121C7A870500E1EB0D /* NetworkCheck.swift in Sources */,
+				251FCF6A1CA21F3C00F9421D /* JiroTextField.swift in Sources */,
+				251FCF6B1CA21F3C00F9421D /* KaedeTextField.swift in Sources */,
 				25FD588A1C73D6A100774526 /* ViewController.swift in Sources */,
+				251FCF6F1CA21F3C00F9421D /* YokoTextField.swift in Sources */,
+				251FCF6C1CA21F3C00F9421D /* MadokaTextField.swift in Sources */,
+				251FCF701CA21F3C00F9421D /* YoshikoTextField.swift in Sources */,
 				25BC8BAC1C7EBFA9007F9526 /* LogInViewController.swift in Sources */,
 				25FD58881C73D6A100774526 /* AppDelegate.swift in Sources */,
+				257476771CB2062C00EC2D77 /* NotesTableViewController.swift in Sources */,
 				252E28CE1C82670900B2C560 /* ThirdViewControler.swift in Sources */,
+				251FCF691CA21F3C00F9421D /* IsaoTextField.swift in Sources */,
+				251FCF6D1CA21F3C00F9421D /* MinoruTextField.swift in Sources */,
+				25D85B801CB3245900FD1250 /* AddNotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +552,7 @@
 		};
 		25FD58A21C73D6A200774526 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29C04329E4323483585E9D63 /* Pods-EKVoiceText.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
@@ -403,6 +561,7 @@
 					"$(PROJECT_DIR)/EKVoiceText/Framework",
 				);
 				INFOPLIST_FILE = EKVoiceText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
@@ -413,6 +572,7 @@
 		};
 		25FD58A31C73D6A200774526 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03194D13ACBEDA1AF48726DB /* Pods-EKVoiceText.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
@@ -421,6 +581,7 @@
 					"$(PROJECT_DIR)/EKVoiceText/Framework",
 				);
 				INFOPLIST_FILE = EKVoiceText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;

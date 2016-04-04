@@ -4,7 +4,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'EKVoiceText' do
-
+   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+   pod 'Firebase', '>= 2.5.1'
 end
 
 target 'EKVoiceTextTests' do
