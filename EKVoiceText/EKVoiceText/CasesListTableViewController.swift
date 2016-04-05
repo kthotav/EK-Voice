@@ -146,6 +146,7 @@ class CasesListTableViewController: UITableViewController {
             let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
             let clientDetailViewController = segue.destinationViewController as! ClientDetailViewController
             clientDetailViewController.clientInfo = self.items[indexPath.row]
+            clientDetailViewController.clientNo = Int(indexPath.row)
         }
        
 

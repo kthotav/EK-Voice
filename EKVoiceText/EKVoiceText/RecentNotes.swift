@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import Firebase
 
-class RecentNotes: UIViewController, UITableViewDelegate {
+class RecentNotes: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var recentnotes = NSDictionary()
+    var refNo:Int?
+    
+    var notes = [String]()
+    var dates = [String]()
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     var cellTapped: Bool = true
     var currentRow = 0
     
     
     
-    var notesDates = ["03/04/2016", "03/02/2016", "02/28/2016", "02/20/2016", "02/18/2016", "02/12/2016", "02/8/2016", "01/29/2016", "01/23/2016"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadNotes()
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,15 +42,19 @@ class RecentNotes: UIViewController, UITableViewDelegate {
     // MARK: Table View Functions
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notesDates.count
+        return notes.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "notesList")
+        let cell = tableView.dequeueReusableCellWithIdentifier("note", forIndexPath: indexPath)
         
-        cell.textLabel?.text = notesDates[indexPath.row]
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text = notes[indexPath.row]
+        
+        
+        // Configure the cell...
         
         return cell
         
@@ -67,6 +82,62 @@ class RecentNotes: UIViewController, UITableViewDelegate {
 //       
 //        return 70
 //    }
+    
+    func loadNotes() {
+        var recentNotes = [String]()
+        var recentDates = [String]()
+        if let notesArray = recentnotes.valueForKey("notes") as? NSArray {
+            for notes in notesArray {
+                if let note = notes["notetext"] {
+                    let unwrappedNote = note!
+                    recentNotes.append(unwrappedNote as! String)
+                    
+                } else {
+                    print ("note does not eixst")
+                }
+                
+                if let date = notes["date"] {
+                    let unwrappedDate = date!
+                    recentDates.append(unwrappedDate as! String)
+                }
+            }
+            
+        } else {
+            print ("no notes")
+        }
+        
+        self.notes = recentNotes
+        self.dates = recentDates
+        
+    }
+    
+    @IBAction func cancelNotesViewController(segue:UIStoryboardSegue) {
+    }
+    
+    @IBAction func saveNotesViewControlle(segue:UIStoryboardSegue) {
+        
+        
+        
+        
+        let url = "https://ekvoicetext.firebaseio.com/"+"\(refNo!)"
+        let ref = Firebase(url: url);
+        let newNote =  ["date": "2015-11-15 11:15:38", "notetext": "\(newNoteText)", "user": "karthik"]
+        let notesRef = ref.childByAppendingPath("notes")
+        notesRef.childByAppendingPath("\(notes.count)").setValue(newNote)
+        
+        
+        //add the new note to the players array
+        notes.append(newNote["notetext"]!)
+        
+        //update the tableView
+        let indexPath = NSIndexPath(forRow: notes.count-1, inSection: 0)
+        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        
+        
+        
+        
+    }
     
     
 

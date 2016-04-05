@@ -8,11 +8,14 @@
 
 import UIKit
 import SwiftyJSON
+import Firebase
 
 var lmPath: String!
 var dicPath: String!
 var words: Array<String> = []
 var currentWord: String!
+
+var newNoteText: String!
 
 var kLevelUpdatesPerSecond = 18
 
@@ -21,6 +24,8 @@ var kbHeight: CGFloat!
 class AddNotesViewController: UIViewController, OEEventsObserverDelegate, UITextViewDelegate {
 
     let whiteColor = UIColor.whiteColor()
+    var no:Int?
+    
     
     
     var openEarsEventsObserver = OEEventsObserver()
@@ -42,15 +47,13 @@ class AddNotesViewController: UIViewController, OEEventsObserverDelegate, UIText
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        heardTextView.becomeFirstResponder()
         // Do any additional setup after loading the view, typically from a nib.
         
         heardTextView.delegate = self
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddNotesViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddNotesViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
-        
-        
-        
+ 
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 74.0/255.0, green: 144.0/255.0, blue: 226.0/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = whiteColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: whiteColor]
@@ -212,23 +215,18 @@ class AddNotesViewController: UIViewController, OEEventsObserverDelegate, UIText
     func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
         
         heardTextView.text = "\(heardTextView.text) \(hypothesis)"
-    }
-    
-    
-    func keyboardWillShow(notification: NSNotification) {
-        
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y -= keyboardSize.height
-        }
         
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y += keyboardSize.height
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "saveNote" {
+            newNoteText = ""
+            newNoteText = "\(heardTextView.text)"
         }
     }
     
+    
+
     
     // close keyboard on touch
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

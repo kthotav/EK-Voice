@@ -27,6 +27,7 @@
 		256CC8511C8A8D4500FF953D /* RecentNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CC8501C8A8D4500FF953D /* RecentNotes.swift */; };
 		257476731CB1930100EC2D77 /* ClientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476721CB1930100EC2D77 /* ClientDetailViewController.swift */; };
 		257476771CB2062C00EC2D77 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476761CB2062C00EC2D77 /* NotesTableViewController.swift */; };
+		25BBEF401CB35D7100508A2B /* DemographicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */; };
 		25BC8BAC1C7EBFA9007F9526 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */; };
 		25D85B801CB3245900FD1250 /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */; };
 		25FD58881C73D6A100774526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD58871C73D6A100774526 /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 		256CC8501C8A8D4500FF953D /* RecentNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentNotes.swift; sourceTree = "<group>"; };
 		257476721CB1930100EC2D77 /* ClientDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailViewController.swift; sourceTree = "<group>"; };
 		257476761CB2062C00EC2D77 /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemographicsViewController.swift; sourceTree = "<group>"; };
 		25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
 		25FD58841C73D6A100774526 /* EKVoiceText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKVoiceText.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 				257476721CB1930100EC2D77 /* ClientDetailViewController.swift */,
 				257476761CB2062C00EC2D77 /* NotesTableViewController.swift */,
 				25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */,
+				25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				25FD58881C73D6A100774526 /* AppDelegate.swift in Sources */,
 				257476771CB2062C00EC2D77 /* NotesTableViewController.swift in Sources */,
 				252E28CE1C82670900B2C560 /* ThirdViewControler.swift in Sources */,
+				25BBEF401CB35D7100508A2B /* DemographicsViewController.swift in Sources */,
 				251FCF691CA21F3C00F9421D /* IsaoTextField.swift in Sources */,
 				251FCF6D1CA21F3C00F9421D /* MinoruTextField.swift in Sources */,
 				25D85B801CB3245900FD1250 /* AddNotesViewController.swift in Sources */,
