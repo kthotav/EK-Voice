@@ -45,6 +45,7 @@
 		25FD58B61C73DD4C00774526 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25FD58B51C73DD4C00774526 /* AcousticModelEnglish.bundle */; };
 		25FD58B81C73DD5D00774526 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25FD58B71C73DD5C00774526 /* AcousticModelSpanish.bundle */; };
 		30FE4741E9C46792CDE742F3 /* Pods_EKVoiceText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3264B7FF5205C50C4D0E965F /* Pods_EKVoiceText.framework */; };
+		9AD23BF51CB4501100B10444 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD23BF41CB4501100B10444 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		25FD58B91C73DE8700774526 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		29C04329E4323483585E9D63 /* Pods-EKVoiceText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKVoiceText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EKVoiceText/Pods-EKVoiceText.debug.xcconfig"; sourceTree = "<group>"; };
 		3264B7FF5205C50C4D0E965F /* Pods_EKVoiceText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKVoiceText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD23BF41CB4501100B10444 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				257476761CB2062C00EC2D77 /* NotesTableViewController.swift */,
 				25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */,
 				25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */,
+				9AD23BF41CB4501100B10444 /* ContactsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				257476731CB1930100EC2D77 /* ClientDetailViewController.swift in Sources */,
+				9AD23BF51CB4501100B10444 /* ContactsViewController.swift in Sources */,
 				251FCF671CA21F3C00F9421D /* HoshiTextField.swift in Sources */,
 				2529FDBE1CAC42E70077980D /* CasesListTableViewController.swift in Sources */,
 				251FCF661CA21F3C00F9421D /* AkiraTextField.swift in Sources */,
@@ -570,7 +574,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Karthik/GoogleDrive/GitHub/kthotav/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lou/Documents/School/Winter16/CMPS116/iOS/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -590,7 +594,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Karthik/GoogleDrive/GitHub/kthotav/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lou/Documents/School/Winter16/CMPS116/iOS/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
 			};
 			name = Release;
 		};

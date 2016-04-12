@@ -74,6 +74,16 @@ class ClientDetailViewController: UIViewController, UITableViewDelegate {
             recentNotesViewController.refNo = clientNo
             
         }
+        
+        if segue.identifier == "contacts" {
+            
+            let contactsViewController = segue.destinationViewController as! ContactsViewController
+            contactsViewController.contacts = clientInfo
+            
+            
+        }
+        
+        
     }
     
     
