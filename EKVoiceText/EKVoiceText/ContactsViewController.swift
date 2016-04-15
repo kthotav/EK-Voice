@@ -23,6 +23,10 @@ class ContactsViewController: UIViewController {
         // Do any additional setup after loading the view.
         contactEmail.text = contacts["attorney_email"] as? String
         
+        if ((contactEmail.text?.isEmpty) != nil){
+            contactEmail.text = "No email provided" as? String
+        }
+        
         var phoneNumDisplay: String = (contacts["attorney_phone"] as? String)!
         var index = phoneNumDisplay.startIndex.advancedBy(0)
         phoneNumDisplay.insert("(", atIndex: index)
