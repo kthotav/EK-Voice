@@ -6,6 +6,7 @@ use_frameworks!
 target 'EKVoiceText' do
    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
    pod 'Firebase', '>= 2.5.1'
+   pod "PagingMenuController"
 end
 
 target 'EKVoiceTextTests' do

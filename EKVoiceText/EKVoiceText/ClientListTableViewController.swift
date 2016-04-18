@@ -1,104 +1,74 @@
 //
-//  CasesListTableViewController.swift
+//  ClientListTableViewController.swift
 //  EKVoiceText
 //
-//  Created by Karthik on 3/30/16.
+//  Created by Karthik on 4/13/16.
 //  Copyright © 2016 KarthikThota. All rights reserved.
 //
 
 import UIKit
-import SwiftyJSON
 import Firebase
 
+class ClientListTableViewController: UITableViewController {
 
-class CasesListTableViewController: UITableViewController {
-
-    var clients = [String]()
-    var claims = [String]()
+    // MARK: - Outlets
     
-    var items = [NSDictionary]()
     
+    // MARK: - UI Fileds
     let whiteColor = UIColor.whiteColor()
-    
-    // Create a reference to a Firebase location
+    let blueColor = UIColor(red: 74.0/255.0, green: 144.0/255.0, blue: 226.0/255.0, alpha: 1.0)
+
+    // MARK: - Firebase Fields
     var myRootRef = Firebase(url:"https://ekvoicetext.firebaseio.com")
+    var jsonData = [NSDictionary]()
     
+    
+    
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        items = [NSDictionary]()
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 74.0/255.0, green: 144.0/255.0, blue: 226.0/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.barTintColor = blueColor
         self.navigationController?.navigationBar.tintColor = whiteColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: whiteColor]
         
+        loadFirebaseData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        // call pareDataCareJSON()
-        // parseDataCareJSON()
-     
-        
-        loadDataFromFirebase()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    // MARK: - praseDataCareJSON using SwiftyJOSN
-    func parseDataCareJSON() {
-        if let path = NSBundle.mainBundle().pathForResource("DataCareJSON", ofType: "json")
-        {
-            do {
-                let pathAsData = try NSData(contentsOfFile: path, options: NSDataReadingOptions.DataReadingMappedIfSafe)
-                let json = JSON(data: pathAsData)
-                //If json is .Dictionary
-                for (_,subJson):(String, JSON) in json {
-                    if let clientNames = subJson["last_name"].string {
-                        clients.append(clientNames)
-                    }
-                    if let claimNums = subJson["claim_no"].string {
-                        claims.append(claimNums)
-                    }
-                    
-                }
-                
-            } catch{
-                print("JSON Data not Parsed!")
-            }
-            
-        }
-    }
- 
-    */ 
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
 
     // MARK: - Table view data source
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        // #warning Incomplete implementation, return the number of rows
+        return jsonData.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("clientName", forIndexPath: indexPath)
-        let dict = items[indexPath.row]
-        cell.textLabel?.text = dict["last_name"] as? String
-        cell.detailTextLabel?.text = dict["claim_no"] as? String
+        let cell = tableView.dequeueReusableCellWithIdentifier("clientNameCell", forIndexPath: indexPath)
+        let json = jsonData[indexPath.row]
+        cell.textLabel?.text = json["last_name"] as? String
+        cell.detailTextLabel?.text = json["claim_no"] as? String
+    
 
         return cell
     }
-    
+ 
 
     /*
     // Override to support conditional editing of the table view.
@@ -142,38 +112,33 @@ class CasesListTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "clientDetail" {
+        if segue.identifier == "showClientDetails" {
             let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
-            let clientDetailViewController = segue.destinationViewController as! ClientDetailViewController
-            clientDetailViewController.clientInfo = self.items[indexPath.row]
-            clientDetailViewController.clientNo = Int(indexPath.row)
-        }
-       
-
-        
-        
+            let clientContactsNotesViewController = segue.destinationViewController as! ContactsNotesViewController
+            clientContactsNotesViewController.rowID = Int(indexPath.row)
+            clientContactsNotesViewController.clientInfo = self.jsonData[indexPath.row]        }
+    }
+ 
+    
+    // MARK: - Logout Action Button
+    @IBAction func logoutbuttonAction(sender: UIBarButtonItem) {
+        self.view.window!.rootViewController?.dismissViewControllerAnimated(false, completion: nil)
     }
     
-    
-    
-    
-    
-    // MARK:- Load data from Firebase
-    
-    func loadDataFromFirebase() {
-        
+    // MARK: - Load Firebase data
+    func loadFirebaseData() {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
         myRootRef.observeEventType(.Value, withBlock: { snapshot in
-            var tempItems = [NSDictionary]()
+            var jsonDataTemp = [NSDictionary]()
             
-            for item in snapshot.children {
-                let child = item as! FDataSnapshot
+            for data in snapshot.children {
+                let child = data as! FDataSnapshot
                 let dict = child.value as! NSDictionary
-                tempItems.append(dict)
+                jsonDataTemp.append(dict)
             }
             
-            self.items = tempItems
+            self.jsonData = jsonDataTemp
             self.tableView.reloadData()
             
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -181,11 +146,5 @@ class CasesListTableViewController: UITableViewController {
         })
     }
     
-    
-    
-    // MARK:- Logout Action
-    
-    @IBAction func logoutAction(sender: AnyObject) {
-        self.view.window!.rootViewController?.dismissViewControllerAnimated(false, completion: nil)
-    }
+
 }
