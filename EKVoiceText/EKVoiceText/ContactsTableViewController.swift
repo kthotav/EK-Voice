@@ -20,6 +20,8 @@ class ContactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        print (contactsInfo)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -46,15 +48,55 @@ class ContactsTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    func loadContacts(){
+        var contacts = [String]()
+        // 0: attorney_name 
+        // 1: attorney_email 
+        // 2: attorney_phone
+        // 3: carrier_contact_name
+        // 4: carrier_contact_phone
+        contacts.append((contactsInfo["attorney_name"] as? String)!)
+        contacts.append((contactsInfo["attorney_email"] as? String)!)
+        contacts.append((contactsInfo["attorney_phone"] as? String)!)
+        contacts.append((contactsInfo["carrier_contact_name"] as? String)!)
+        contacts.append((contactsInfo["carrier_contact_phone"] as? String)!)
+        
+        
+        for (var i = 0; i < contacts.count; i += 1){
+            if contacts[i] == ""{
+                contacts[i] = "Not Provided"
+            }
+        }
+        
+        var attPhoneNumDisplay: String = formatNumber(contacts[2])
+        var carPhoneNumDisplay: String = formatNumber(contacts[4])
+        
+        
+    }
+    
+    func formatNumber(phone: String) -> String{
+        var index = phone.startIndex.advancedBy(0)
+        var ret: String = phone
+        ret.insert("(", atIndex: index)
+        index = ret.startIndex.advancedBy(4)
+        ret.insert(")", atIndex: index)
+        index = ret.startIndex.advancedBy(5)
+        ret.insert(" ", atIndex: index)
+        index = ret.startIndex.advancedBy(9)
+        ret.insert("-", atIndex: index)
+        return ret
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("contacts", forIndexPath: indexPath)
+        
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text = contacts[indexPath.row]
         // Configure the cell...
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

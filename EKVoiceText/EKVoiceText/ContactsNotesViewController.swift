@@ -32,6 +32,8 @@ class ContactsNotesViewController: UIViewController, PagingMenuControllerDelegat
         recentNotesTableController.notesID = rowID
         recentNotesTableController.notesInfo = clientInfo
         recentNotesTableController.title = "Notes"
+        contactsTableViewController.contactsInfo = clientInfo
+
     
         
         let viewControllers = [contactsTableViewController, recentNotesTableController]
