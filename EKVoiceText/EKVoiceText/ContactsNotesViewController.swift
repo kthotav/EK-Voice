@@ -24,9 +24,11 @@ class ContactsNotesViewController: UIViewController, PagingMenuControllerDelegat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.title = clientInfo["last_name"] as? String
         
         let contactsTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContactsTableViewController") as! ContactsTableViewController
         contactsTableViewController.contactsID = rowID
+        contactsTableViewController.contactsInfo = clientInfo
         contactsTableViewController.title = "Contacts"
         let recentNotesTableController = self.storyboard?.instantiateViewControllerWithIdentifier("RecentNotesTableViewController") as! RecentNotesTableViewController
         recentNotesTableController.notesID = rowID

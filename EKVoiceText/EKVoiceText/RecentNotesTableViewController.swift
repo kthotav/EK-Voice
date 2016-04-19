@@ -12,10 +12,15 @@ import Firebase
 
 class RecentNotesTableViewController: UITableViewController {
 
+    // MARK: - Outlets
+
+    
+    
     // MARK: - Fields
     var notesID: Int?
     var notesInfo = NSDictionary()
     var notes = [String]()
+    var users = [String]()
     
 
     
@@ -28,6 +33,9 @@ class RecentNotesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         loadNotes()
+        self.notes = notes.reverse()
+        self.users = users.reverse()
+        tableView.reloadData()
       
     }
 
@@ -54,6 +62,7 @@ class RecentNotesTableViewController: UITableViewController {
 
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = notes[indexPath.row]
+        cell.detailTextLabel?.text = "By: " + users[indexPath.row]
 
 
         // Configure the cell...
@@ -109,7 +118,8 @@ class RecentNotesTableViewController: UITableViewController {
     
     func loadNotes() {
         var recentNotes = [String]()
-        var recentDates = [String]()
+        // var recentDates = [String]()
+        var recentUsers = [String]()
         if let notesArray = notesInfo.valueForKey("notes") as? NSArray {
             for notes in notesArray {
                 if let note = notes["notetext"] {
@@ -120,9 +130,9 @@ class RecentNotesTableViewController: UITableViewController {
                     print ("note does not eixst")
                 }
                 
-                if let date = notes["date"] {
-                    let unwrappedDate = date!
-                    recentDates.append(unwrappedDate as! String)
+                if let user = notes["user"] {
+                    let unwrappedUser = user!
+                    recentUsers.append(unwrappedUser as! String)
                 }
             }
             
@@ -131,8 +141,31 @@ class RecentNotesTableViewController: UITableViewController {
         }
         
         self.notes = recentNotes
+        self.users = recentUsers
         // self.dates = recentDates
         
     }
+    
+    @IBAction func cancelNoteViewController(segue:UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func saveNoteViewControlle(segue:UIStoryboardSegue) {
+        let url = "https://ekvoicetext.firebaseio.com/"+"\(notesID!)"
+        let ref = Firebase(url: url);
+        let newNote =  ["date": "2015-11-15 11:15:38", "notetext": "\(newNoteText)", "user": "karthik"]
+        let notesRef = ref.childByAppendingPath("notes")
+        notesRef.childByAppendingPath("\(notes.count)").setValue(newNote)
+        
+        
+        //add the new note to the notes and users arrays
+        notes.insert(newNote["notetext"]!, atIndex:0)
+        users.insert(newNote["user"]!, atIndex: 0)
+        
+        //update the tableView
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    }
+
 
 }

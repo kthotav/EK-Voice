@@ -1071,6 +1071,13 @@
                             <constraint firstAttribute="trailing" secondItem="Koj-Xe-aJ3" secondAttribute="trailing" id="qg5-Yi-crq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6T1-iZ-rI3">
+                        <barButtonItem key="rightBarButtonItem" title="Add Note" id="Zr9-Nf-i5m">
+                            <connections>
+                                <segue destination="TIL-7G-x4n" kind="presentation" id="88z-Kd-p1P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isv-Ff-8Jg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1097,10 +1104,64 @@
             </objects>
             <point key="canvasLocation" x="-409" y="1745"/>
         </scene>
+        <!--Add Note-->
+        <scene sceneID="5V9-Pv-BhY">
+            <objects>
+                <exit id="SkK-k4-Zjn" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDK-db-vvL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Owp-rJ-sgA" customClass="AddNoteViewController" customModule="EKVoiceText" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MzH-lu-kZu"/>
+                        <viewControllerLayoutGuide type="bottom" id="OmN-Bf-hQF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OkC-Ne-AuW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YMy-s7-apL">
+                                <rect key="frame" x="40" y="100" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S2i-UP-RjW">
+                                <rect key="frame" x="136" y="260" width="51" height="31"/>
+                                <connections>
+                                    <action selector="offlineSpeechPressed:" destination="Owp-rJ-sgA" eventType="valueChanged" id="cZI-Yw-sNY"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Note" id="3WW-MC-Na8">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="IM2-Mi-REz">
+                            <connections>
+                                <segue destination="SkK-k4-Zjn" kind="unwind" unwindAction="cancelNoteViewController:" id="5RV-E2-Hsf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="gcA-GA-lCo">
+                            <connections>
+                                <segue destination="SkK-k4-Zjn" kind="unwind" identifier="saveNote" unwindAction="saveNoteViewControlle:" id="tk3-ls-TPD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="heardTextView" destination="YMy-s7-apL" id="ap0-6D-PHE"/>
+                        <outlet property="offlineSpeechSwitch" destination="S2i-UP-RjW" id="smt-lF-LWr"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1294" y="1238"/>
+        </scene>
         <!--Paging Menu Controller-->
         <scene sceneID="mlU-A1-end">
             <objects>
                 <viewController id="yf9-aL-OEg" customClass="PagingMenuController" customModule="PagingMenuController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hcY-8l-Khz"/>
+                        <viewControllerLayoutGuide type="bottom" id="WFe-mL-pfe"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="E08-Qh-1ZG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1109,7 +1170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNB-X3-KIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="1744.5"/>
+            <point key="canvasLocation" x="879" y="1836.5"/>
         </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="dnP-Ri-bao">
@@ -1120,12 +1181,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BiX-ZV-tYq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contact" textLabel="iDK-sF-lGI" style="IBUITableViewCellStyleDefault" id="BiX-ZV-tYq">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BiX-ZV-tYq" id="DEJ-Vc-F4b">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iDK-sF-lGI">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -1138,29 +1208,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8J1-3G-lVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="1801"/>
+            <point key="canvasLocation" x="1251" y="1893"/>
         </scene>
         <!--Recent Notes Table View Controller-->
         <scene sceneID="WSA-ZS-kBq">
             <objects>
                 <tableViewController storyboardIdentifier="RecentNotesTableViewController" id="t7m-yG-i2m" customClass="RecentNotesTableViewController" customModule="EKVoiceText" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="x1x-6j-15H">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" id="x1x-6j-15H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="note" textLabel="YPL-CT-a1R" style="IBUITableViewCellStyleDefault" id="LBJ-q4-i4e">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="note" textLabel="YPL-CT-a1R" detailTextLabel="eQh-r6-TZC" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="LBJ-q4-i4e">
+                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LBJ-q4-i4e" id="9fM-er-sgz">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YPL-CT-a1R">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <rect key="frame" x="15" y="14" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eQh-r6-TZC">
+                                            <rect key="frame" x="15" y="34" width="38" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -1173,10 +1250,31 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="x1x-6j-15H" id="mYK-D0-iEp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdr-hJ-bcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="2433"/>
+            <point key="canvasLocation" x="1645" y="1893"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2ql-we-T90">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MaS-r3-F60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TIL-7G-x4n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WXl-TK-NQA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Owp-rJ-sgA" kind="relationship" relationship="rootViewController" id="j1e-WE-vPY"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="879" y="1238"/>
         </scene>
     </scenes>
     <resources>

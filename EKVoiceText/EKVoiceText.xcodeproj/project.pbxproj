@@ -33,6 +33,7 @@
 		256CC8511C8A8D4500FF953D /* RecentNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CC8501C8A8D4500FF953D /* RecentNotes.swift */; };
 		257476731CB1930100EC2D77 /* ClientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476721CB1930100EC2D77 /* ClientDetailViewController.swift */; };
 		257476771CB2062C00EC2D77 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476761CB2062C00EC2D77 /* NotesTableViewController.swift */; };
+		259E45531CC5961900262352 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45521CC5961900262352 /* AddNoteViewController.swift */; };
 		25BBEF401CB35D7100508A2B /* DemographicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */; };
 		25BC8BAC1C7EBFA9007F9526 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */; };
 		25D85B801CB3245900FD1250 /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */; };
@@ -93,6 +94,7 @@
 		256CC8501C8A8D4500FF953D /* RecentNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentNotes.swift; sourceTree = "<group>"; };
 		257476721CB1930100EC2D77 /* ClientDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailViewController.swift; sourceTree = "<group>"; };
 		257476761CB2062C00EC2D77 /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		259E45521CC5961900262352 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemographicsViewController.swift; sourceTree = "<group>"; };
 		25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,8 @@
 				255C0B901CC056EB00B2025A /* ContactsNotesViewController.swift */,
 				255C0B941CC2E9C800B2025A /* ContactsTableViewController.swift */,
 				255C0B961CC2EFD300B2025A /* RecentNotesTableViewController.swift */,
+				259E45521CC5961900262352 /* AddNoteViewController.swift */,
+				25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */,
 				256CC8501C8A8D4500FF953D /* RecentNotes.swift */,
 				25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */,
 				253D990F1C7A7EA000E1EB0D /* SecondViewController.swift */,
@@ -213,7 +217,6 @@
 				2529FDBD1CAC42E70077980D /* CasesListTableViewController.swift */,
 				257476721CB1930100EC2D77 /* ClientDetailViewController.swift */,
 				257476761CB2062C00EC2D77 /* NotesTableViewController.swift */,
-				25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */,
 				25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */,
 			);
 			name = Controllers;
@@ -451,6 +454,7 @@
 				251FCF6B1CA21F3C00F9421D /* KaedeTextField.swift in Sources */,
 				25FD588A1C73D6A100774526 /* ViewController.swift in Sources */,
 				251FCF6F1CA21F3C00F9421D /* YokoTextField.swift in Sources */,
+				259E45531CC5961900262352 /* AddNoteViewController.swift in Sources */,
 				251FCF6C1CA21F3C00F9421D /* MadokaTextField.swift in Sources */,
 				255C0B951CC2E9C800B2025A /* ContactsTableViewController.swift in Sources */,
 				251FCF701CA21F3C00F9421D /* YoshikoTextField.swift in Sources */,
