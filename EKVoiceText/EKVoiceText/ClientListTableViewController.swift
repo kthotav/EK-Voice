@@ -17,6 +17,7 @@ class ClientListTableViewController: UITableViewController {
     // MARK: - UI Fileds
     let whiteColor = UIColor.whiteColor()
     let blueColor = UIColor(red: 74.0/255.0, green: 144.0/255.0, blue: 226.0/255.0, alpha: 1.0)
+    
 
     // MARK: - Firebase Fields
     var myRootRef = Firebase(url:"https://ekvoicetext.firebaseio.com")
@@ -31,6 +32,24 @@ class ClientListTableViewController: UITableViewController {
         self.navigationController?.navigationBar.barTintColor = blueColor
         self.navigationController?.navigationBar.tintColor = whiteColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: whiteColor]
+        // self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+        // self.navigationController?.navigationBar.translucent = true
+        
+        // self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        self.tabBarController?.tabBar.barTintColor = whiteColor
+        
+
+        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        let backgroundImage = UIImage(named: "background")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+        imageView.contentMode = .ScaleAspectFill
+        
+        
+        
         
         loadFirebaseData()
 
@@ -50,23 +69,31 @@ class ClientListTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return jsonData.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return jsonData.count
+        return 1
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("clientNameCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("clientNameCell", forIndexPath: indexPath) as! ClientNameTableViewCell
         let json = jsonData[indexPath.row]
-        cell.textLabel?.text = json["last_name"] as? String
-        cell.detailTextLabel?.text = json["claim_no"] as? String
+        cell.nameLable.text = json["last_name"] as? String
+        cell.claimNoLabel.text = json["claim_no"] as? String
+        
+        cell.layer.cornerRadius = 5
+        cell.layer.masksToBounds = true
+       
     
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = .clearColor()
     }
  
 
@@ -144,6 +171,10 @@ class ClientListTableViewController: UITableViewController {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             
         })
+    }
+    
+    override func  preferredStatusBarStyle()-> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
 

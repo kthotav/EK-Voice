@@ -17,20 +17,47 @@ class ContactsTableViewController: UITableViewController {
     var contactsInfo = NSDictionary()
     var contacts = [String]()
     
+    // MARK: - UI Fileds
+    let whiteColor = UIColor.whiteColor()
+    let blueColor = UIColor(red: 74.0/255.0, green: 144.0/255.0, blue: 226.0/255.0, alpha: 1.0)
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
+        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+        
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        
-        
         contacts.append(contactsInfo["attorney_name"]! as! String)
         contacts.append(contactsInfo["carrier_contact_name"]! as! String)
         contacts.append(contactsInfo["primary_md_name"]! as! String)
+        
+        self.navigationController?.navigationBar.barTintColor = blueColor
+        self.navigationController?.navigationBar.tintColor = whiteColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: whiteColor]
+        // self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+        // self.navigationController?.navigationBar.translucent = true
+        
+        // self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        self.tabBarController?.tabBar.barTintColor = whiteColor
+        
+        
+        
+        // self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+//        let backgroundImage = UIImage(named: "background")
+//        let imageView = UIImageView(image: backgroundImage)
+//        self.tableView.backgroundView = imageView
+//        imageView.contentMode = .ScaleAspectFill
+        
+        
       
 
     }
@@ -106,5 +133,9 @@ class ContactsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func  preferredStatusBarStyle()-> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
 }

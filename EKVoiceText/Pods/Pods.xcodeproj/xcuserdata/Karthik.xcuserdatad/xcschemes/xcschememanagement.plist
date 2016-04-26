@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FoldingCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PagingMenuController-PagingMenuController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,6 +42,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>44D04613A7591446E9F604C26C55657F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5BBB34170986C897E8931C1768FD6EE3</key>
 		<dict>
 			<key>primary</key>
@@ -47,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C93C4BC473CC2B7E8D8703ABED9A935C</key>
+		<key>C47BA07D7354A940C0D5CBFC7941DD79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF8B2F5E1BA3CC447A40AECB8B84E02C</key>
+		<key>E223EBD8FDE445FAC5510AA6424FB005</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -15,7 +15,6 @@ class RecentNotesTableViewController: UITableViewController {
     // MARK: - Outlets
 
     
-    
     // MARK: - Fields
     var notesID: Int?
     var notesInfo = NSDictionary()
@@ -26,6 +25,14 @@ class RecentNotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let backgroundImage = UIImage(named: "background")
+//        let imageView = UIImageView(image: backgroundImage)
+//        self.tableView.backgroundView = imageView
+//        imageView.contentMode = .ScaleAspectFill
+        
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -58,16 +65,20 @@ class RecentNotesTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("note", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("note", forIndexPath: indexPath) as! NoteTableViewCell
 
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = notes[indexPath.row]
-        cell.detailTextLabel?.text = "By: " + users[indexPath.row]
+       
+        cell.noteLabel.text = notes[indexPath.row]
+        cell.byLabel.text = "By: " + users[indexPath.row]
 
 
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = .clearColor()
     }
  
 

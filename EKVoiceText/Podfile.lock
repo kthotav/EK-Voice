@@ -1,10 +1,12 @@
 PODS:
   - Firebase (2.5.1)
+  - FoldingCell (0.8.1)
   - PagingMenuController (0.8.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Firebase (>= 2.5.1)
+  - FoldingCell (~> 0.8.1)
   - PagingMenuController
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -19,6 +21,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  FoldingCell: d5e51ca7f9a14c0d7c6abb8a1c06de2b6f4186b2
   PagingMenuController: 1a9ff8ad0ab9704f215706997c1a624bc951f508
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 

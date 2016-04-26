@@ -24,9 +24,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="HEALTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bba-2v-g0X">
-                                <rect key="frame" x="95" y="473" width="120" height="40"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VOICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bba-2v-g0X">
+                                <rect key="frame" x="91" y="303" width="145" height="49"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="50"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -34,12 +34,12 @@
                         <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="dN3-ge-tQX" secondAttribute="bottom" constant="247" id="56c-R3-wFA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bba-2v-g0X" secondAttribute="trailing" constant="82" id="HQY-S3-Drb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bba-2v-g0X" secondAttribute="trailing" constant="64" id="HQY-S3-Drb"/>
                             <constraint firstItem="dN3-ge-tQX" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="204" id="JDn-H7-7Ef"/>
-                            <constraint firstItem="Bba-2v-g0X" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="86" id="MeK-L4-PTj"/>
+                            <constraint firstItem="Bba-2v-g0X" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="71" id="MeK-L4-PTj"/>
                             <constraint firstItem="dN3-ge-tQX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="79" id="bG5-G6-eV4"/>
                             <constraint firstItem="Bba-2v-g0X" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="283" id="cih-kp-SMW"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Bba-2v-g0X" secondAttribute="bottom" constant="225" id="pRJ-KY-ioO"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Bba-2v-g0X" secondAttribute="bottom" constant="216" id="pRJ-KY-ioO"/>
                             <constraint firstItem="dN3-ge-tQX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="v39-1s-K1y"/>
                         </constraints>
                     </view>

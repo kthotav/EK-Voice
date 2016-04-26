@@ -21,6 +21,9 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.usernameTextField.delegate = self
+        
+        self.passwordTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +71,23 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
             }
             
         }
+        
+        if usernameTextField.text == "" || passwordTextField.text == "" {
+            loginErrorAlert("Login Error", message: "Enter Username and Password")
+        }
+        
+        if usernameTextField.text != "Karthik" && passwordTextField.text != "Karthik" {
+            loginErrorAlert("Login Error", message: "Username or Password Incorrect")
+        }
+    }
+    
+    func loginErrorAlert(title: String, message: String) {
+        
+        // Called upon login error to let the user know login didn't work.
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
     }
     
     
@@ -78,6 +98,14 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    // closes when user taps "return" on keyboard
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+   
 
     /*
     // MARK: - Navigation
@@ -88,5 +116,9 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func  preferredStatusBarStyle()-> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
 }

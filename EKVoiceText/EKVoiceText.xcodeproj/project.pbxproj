@@ -33,7 +33,12 @@
 		256CC8511C8A8D4500FF953D /* RecentNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CC8501C8A8D4500FF953D /* RecentNotes.swift */; };
 		257476731CB1930100EC2D77 /* ClientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476721CB1930100EC2D77 /* ClientDetailViewController.swift */; };
 		257476771CB2062C00EC2D77 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476761CB2062C00EC2D77 /* NotesTableViewController.swift */; };
+		2577B1A61CCEF5650017AE87 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2577B1A51CCEF5650017AE87 /* NoteTableViewCell.swift */; };
 		259E45531CC5961900262352 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45521CC5961900262352 /* AddNoteViewController.swift */; };
+		259E45811CC6BD8300262352 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45801CC6BD8300262352 /* FoldingCell.swift */; };
+		259E45831CC6BD8B00262352 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45821CC6BD8B00262352 /* DemoCell.swift */; };
+		259E45851CC6BD9400262352 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45841CC6BD9400262352 /* MainTableViewController.swift */; };
+		259E45871CC7420000262352 /* ClientNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45861CC7420000262352 /* ClientNameTableViewCell.swift */; };
 		25BBEF401CB35D7100508A2B /* DemographicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */; };
 		25BC8BAC1C7EBFA9007F9526 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */; };
 		25D85B801CB3245900FD1250 /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */; };
@@ -94,7 +99,12 @@
 		256CC8501C8A8D4500FF953D /* RecentNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentNotes.swift; sourceTree = "<group>"; };
 		257476721CB1930100EC2D77 /* ClientDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailViewController.swift; sourceTree = "<group>"; };
 		257476761CB2062C00EC2D77 /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		2577B1A51CCEF5650017AE87 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		259E45521CC5961900262352 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		259E45801CC6BD8300262352 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
+		259E45821CC6BD8B00262352 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
+		259E45841CC6BD9400262352 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		259E45861CC7420000262352 /* ClientNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientNameTableViewCell.swift; sourceTree = "<group>"; };
 		25BBEF3F1CB35D7100508A2B /* DemographicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemographicsViewController.swift; sourceTree = "<group>"; };
 		25BC8BAB1C7EBFA9007F9526 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		25D85B7F1CB3245900FD1250 /* AddNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
@@ -202,8 +212,13 @@
 		2583E4851C83BA0500232BA3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				259E45801CC6BD8300262352 /* FoldingCell.swift */,
+				259E45821CC6BD8B00262352 /* DemoCell.swift */,
+				259E45841CC6BD9400262352 /* MainTableViewController.swift */,
 				255C0B861CBE154C00B2025A /* UserLoginViewController.swift */,
 				255C0B881CBECD1000B2025A /* ClientListTableViewController.swift */,
+				2577B1A51CCEF5650017AE87 /* NoteTableViewCell.swift */,
+				259E45861CC7420000262352 /* ClientNameTableViewCell.swift */,
 				255C0B901CC056EB00B2025A /* ContactsNotesViewController.swift */,
 				255C0B941CC2E9C800B2025A /* ContactsTableViewController.swift */,
 				255C0B961CC2EFD300B2025A /* RecentNotesTableViewController.swift */,
@@ -450,15 +465,19 @@
 				255C0B891CBECD1000B2025A /* ClientListTableViewController.swift in Sources */,
 				251FCF6E1CA21F3C00F9421D /* TextFieldsEffects.swift in Sources */,
 				253D99121C7A870500E1EB0D /* NetworkCheck.swift in Sources */,
+				259E45831CC6BD8B00262352 /* DemoCell.swift in Sources */,
 				251FCF6A1CA21F3C00F9421D /* JiroTextField.swift in Sources */,
 				251FCF6B1CA21F3C00F9421D /* KaedeTextField.swift in Sources */,
+				259E45811CC6BD8300262352 /* FoldingCell.swift in Sources */,
 				25FD588A1C73D6A100774526 /* ViewController.swift in Sources */,
 				251FCF6F1CA21F3C00F9421D /* YokoTextField.swift in Sources */,
 				259E45531CC5961900262352 /* AddNoteViewController.swift in Sources */,
 				251FCF6C1CA21F3C00F9421D /* MadokaTextField.swift in Sources */,
+				259E45851CC6BD9400262352 /* MainTableViewController.swift in Sources */,
 				255C0B951CC2E9C800B2025A /* ContactsTableViewController.swift in Sources */,
 				251FCF701CA21F3C00F9421D /* YoshikoTextField.swift in Sources */,
 				25BC8BAC1C7EBFA9007F9526 /* LogInViewController.swift in Sources */,
+				259E45871CC7420000262352 /* ClientNameTableViewCell.swift in Sources */,
 				25FD58881C73D6A100774526 /* AppDelegate.swift in Sources */,
 				257476771CB2062C00EC2D77 /* NotesTableViewController.swift in Sources */,
 				252E28CE1C82670900B2C560 /* ThirdViewControler.swift in Sources */,
@@ -466,6 +485,7 @@
 				251FCF691CA21F3C00F9421D /* IsaoTextField.swift in Sources */,
 				251FCF6D1CA21F3C00F9421D /* MinoruTextField.swift in Sources */,
 				25D85B801CB3245900FD1250 /* AddNotesViewController.swift in Sources */,
+				2577B1A61CCEF5650017AE87 /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
