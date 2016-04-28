@@ -20,6 +20,7 @@ class RecentNotesTableViewController: UITableViewController {
     var notesInfo = NSDictionary()
     var notes = [String]()
     var users = [String]()
+    let whiteColor = UIColor.whiteColor()
     
 
     
@@ -31,14 +32,16 @@ class RecentNotesTableViewController: UITableViewController {
 //        self.tableView.backgroundView = imageView
 //        imageView.contentMode = .ScaleAspectFill
         
-        self.tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+//        self.tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
+//        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+//        self.tabBarController?.tabBar.barTintColor = whiteColor
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         loadNotes()
         self.notes = notes.reverse()
         self.users = users.reverse()

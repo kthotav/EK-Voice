@@ -9,6 +9,7 @@
 import UIKit
 import LocalAuthentication
 
+
 class UserLoginViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Outlets
@@ -24,6 +25,9 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
         self.usernameTextField.delegate = self
         
         self.passwordTextField.delegate = self
+        
+     
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -117,8 +121,9 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
     }
     */
     
-    override func  preferredStatusBarStyle()-> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+   
+    @IBAction func button(sender: AnyObject) {
+        
     }
 
 }

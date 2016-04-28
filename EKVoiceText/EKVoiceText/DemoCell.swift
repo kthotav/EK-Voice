@@ -15,7 +15,9 @@ class DemoCell: FoldingCell {
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var contactTitleLabel: UILabel!
     
+    @IBOutlet weak var oContactNameLabel: UILabel!
     
+    @IBOutlet weak var oContactTitleLabel: UILabel!
     
     override func awakeFromNib() {
         

@@ -34,6 +34,7 @@
 		257476731CB1930100EC2D77 /* ClientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476721CB1930100EC2D77 /* ClientDetailViewController.swift */; };
 		257476771CB2062C00EC2D77 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257476761CB2062C00EC2D77 /* NotesTableViewController.swift */; };
 		2577B1A61CCEF5650017AE87 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2577B1A51CCEF5650017AE87 /* NoteTableViewCell.swift */; };
+		2577B1CD1CD035ED0017AE87 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2577B1CC1CD035ED0017AE87 /* QuartzCore.framework */; };
 		259E45531CC5961900262352 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45521CC5961900262352 /* AddNoteViewController.swift */; };
 		259E45811CC6BD8300262352 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45801CC6BD8300262352 /* FoldingCell.swift */; };
 		259E45831CC6BD8B00262352 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E45821CC6BD8B00262352 /* DemoCell.swift */; };
@@ -100,6 +101,7 @@
 		257476721CB1930100EC2D77 /* ClientDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailViewController.swift; sourceTree = "<group>"; };
 		257476761CB2062C00EC2D77 /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		2577B1A51CCEF5650017AE87 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		2577B1CC1CD035ED0017AE87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		259E45521CC5961900262352 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		259E45801CC6BD8300262352 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 		259E45821CC6BD8B00262352 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2577B1CD1CD035ED0017AE87 /* QuartzCore.framework in Frameworks */,
 				251FCF761CA2535700F9421D /* LocalAuthentication.framework in Frameworks */,
 				25FD58B41C73DCC100774526 /* Slt.framework in Frameworks */,
 				25FD58B21C73DCA800774526 /* OpenEars.framework in Frameworks */,
@@ -179,6 +182,7 @@
 		251FCF771CA2536900F9421D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2577B1CC1CD035ED0017AE87 /* QuartzCore.framework */,
 				251FCF751CA2535700F9421D /* LocalAuthentication.framework */,
 				25FD58B31C73DCC100774526 /* Slt.framework */,
 				25FD58B11C73DCA800774526 /* OpenEars.framework */,
@@ -214,9 +218,9 @@
 			children = (
 				259E45801CC6BD8300262352 /* FoldingCell.swift */,
 				259E45821CC6BD8B00262352 /* DemoCell.swift */,
+				255C0B881CBECD1000B2025A /* ClientListTableViewController.swift */,
 				259E45841CC6BD9400262352 /* MainTableViewController.swift */,
 				255C0B861CBE154C00B2025A /* UserLoginViewController.swift */,
-				255C0B881CBECD1000B2025A /* ClientListTableViewController.swift */,
 				2577B1A51CCEF5650017AE87 /* NoteTableViewCell.swift */,
 				259E45861CC7420000262352 /* ClientNameTableViewCell.swift */,
 				255C0B901CC056EB00B2025A /* ContactsNotesViewController.swift */,

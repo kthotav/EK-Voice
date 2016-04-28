@@ -92,7 +92,9 @@ class MainTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath) as! DemoCell
         cell.contactNameLabel.text = contacts[indexPath.row]
+        cell.oContactNameLabel.text = contacts[indexPath.row]
         cell.contactTitleLabel.text = contactTitle[indexPath.row]
+        cell.oContactTitleLabel.text = contactTitle[indexPath.row]
         return cell
     }
     

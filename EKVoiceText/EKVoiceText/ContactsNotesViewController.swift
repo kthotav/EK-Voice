@@ -20,6 +20,7 @@ class ContactsNotesViewController: UIViewController, PagingMenuControllerDelegat
     let whiteColor = UIColor.whiteColor()
     let blueColor = UIColor(red: 74.0/255.0, green: 144.0/255.0, blue: 226.0/255.0, alpha: 1.0)
     let grayColor = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 0.1)
+    let grayColor2 = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,8 @@ class ContactsNotesViewController: UIViewController, PagingMenuControllerDelegat
         options.selectedTextColor = blueColor
         options.menuDisplayMode = .Standard(widthMode: .Flexible, centerItem: true, scrollingMode: .PagingEnabled)
         options.menuItemMode = .Underline(height: 1, color: blueColor, horizontalPadding: 0, verticalPadding: 0)
-        options.backgroundColor = grayColor
+        // options.backgroundColor = grayColor
+        // options.selectedBackgroundColor = grayColor2
         
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.delegate = self

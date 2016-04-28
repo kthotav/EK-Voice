@@ -43,10 +43,10 @@ class ClientListTableViewController: UITableViewController {
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-        let backgroundImage = UIImage(named: "background")
-        let imageView = UIImageView(image: backgroundImage)
-        self.tableView.backgroundView = imageView
-        imageView.contentMode = .ScaleAspectFill
+//        let backgroundImage = UIImage(named: "background")
+//        let imageView = UIImageView(image: backgroundImage)
+//        self.tableView.backgroundView = imageView
+//        imageView.contentMode = .ScaleAspectFill
         
         
         
@@ -69,12 +69,12 @@ class ClientListTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return jsonData.count
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return jsonData.count
     }
 
     
