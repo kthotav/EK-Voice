@@ -120,15 +120,22 @@ class RecentNotesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showNoteDetail" {
+            let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
+            let notesDetailViewController = segue.destinationViewController as! NotesdetailViewController
+            
+            notesDetailViewController.noteDetail = notes[indexPath.row]
+        }
+        
     }
-    */
+ 
     
     func loadNotes() {
         var recentNotes = [String]()

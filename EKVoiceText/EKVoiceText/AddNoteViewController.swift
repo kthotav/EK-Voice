@@ -231,5 +231,7 @@ class AddNoteViewController: UIViewController, OEEventsObserverDelegate {
     }
     */
     
+    @IBAction func timmerButton(sender: UIButton) {
+    }
 
 }
