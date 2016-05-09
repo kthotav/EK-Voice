@@ -636,7 +636,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Karthik/GoogleDrive/GitHub/kthotav/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/marcoschabolla/Documents/School/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -656,7 +656,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthik.EKVoiceText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Karthik/GoogleDrive/GitHub/kthotav/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/marcoschabolla/Documents/School/VoiceToText/EKVoiceText/EKVoiceText/Bridge-Header.h";
 			};
 			name = Release;
 		};

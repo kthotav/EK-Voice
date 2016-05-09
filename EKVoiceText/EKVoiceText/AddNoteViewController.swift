@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 //
 var lmPath: String!
 var dicPath: String!
@@ -20,20 +19,24 @@ var kbHeight: CGFloat!
 
 class AddNoteViewController: UIViewController, OEEventsObserverDelegate {
 
+    // MARK: - Variables
+    //Timer
+    var isPaused = true
+    var SwiftTimer = NSTimer()
+    var Counter = 0
+    
+    //OpenEars
+    var openEarsEventsObserver = OEEventsObserver()
+    var startupFailedDueToLackOfPermissions = Bool()
     
     // MARK: - Outlets
     @IBOutlet weak var offlineSpeechSwitch: UISwitch!
     @IBOutlet weak var heardTextView: UITextView!
+    @IBOutlet weak var timeLabel: UILabel!
     
     // MARK: - Fields
     let whiteColor = UIColor.whiteColor()
     let blueColor = UIColor(red: 74.0/255.0, green: 144.0/255.0, blue: 226.0/255.0, alpha: 1.0)
-    
-    
-    
-    var openEarsEventsObserver = OEEventsObserver()
-    var startupFailedDueToLackOfPermissions = Bool()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +57,6 @@ class AddNoteViewController: UIViewController, OEEventsObserverDelegate {
         heardTextView.layer.borderColor = borderColor.CGColor
         heardTextView.layer.cornerRadius = 5.0
 
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +72,6 @@ class AddNoteViewController: UIViewController, OEEventsObserverDelegate {
         else {
             stopListening()
         }
-        
     }
     
     //OpenEars methods begin
@@ -230,8 +231,35 @@ class AddNoteViewController: UIViewController, OEEventsObserverDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+   
+    
+
+   /*
+    var showPlayButton: UIBarButtonItem{
+        return UIBarButtonItem (barButtonSystemItem: .Play, target: self, action: #selector(AVMIDIPlayer.play(_:)))
+    }
+    
+    var showPauseButton: UIBarButtonItem{
+        return UIBarButtonItem (barButtonSystemItem: .Pause, target: self, action: "pause:")
+   }*/
     
     @IBAction func timmerButton(sender: UIButton) {
+        if isPaused{
+            SwiftTimer = NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector: #selector(AddNoteViewController.updateCounter), userInfo: nil, repeats: true)
+            isPaused = false
+           //playOrPause()
+            
+        }
+        else {
+            SwiftTimer.invalidate()
+            isPaused = true
+           //playOrPause()
+        }
+    }
+    
+    func updateCounter(){
+        Counter += 1
+        timeLabel.text = String(format:"Time: %02d:%02d", (Counter/100)%60, Counter%100)
     }
 
 }
