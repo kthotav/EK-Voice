@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftSpinner
 
 class ClientListTableViewController: UITableViewController {
 
@@ -29,35 +30,33 @@ class ClientListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // settings for nav bar UI
         self.navigationController?.navigationBar.barTintColor = blueColor
         self.navigationController?.navigationBar.tintColor = whiteColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: whiteColor]
-        // self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
-        // self.navigationController?.navigationBar.translucent = true
-        
-        // self.navigationController?.navigationBar.shadowImage = UIImage()
+      
         
         self.tabBarController?.tabBar.barTintColor = whiteColor
-        
-
-        
+    
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-//        let backgroundImage = UIImage(named: "background")
-//        let imageView = UIImageView(image: backgroundImage)
-//        self.tableView.backgroundView = imageView
-//        imageView.contentMode = .ScaleAspectFill
-        
-        
-        
+       
+        SwiftSpinner.show("Loading...")
         
         loadFirebaseData()
+        
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        SwiftSpinner.hide()
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,6 +93,10 @@ class ClientListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = .clearColor()
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        SwiftSpinner.show("Loading...")
     }
  
 
@@ -139,7 +142,10 @@ class ClientListTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        
         if segue.identifier == "showClientDetails" {
+            
             let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
             let clientContactsNotesViewController = segue.destinationViewController as! ContactsNotesViewController
             clientContactsNotesViewController.rowID = Int(indexPath.row)
@@ -167,6 +173,9 @@ class ClientListTableViewController: UITableViewController {
             
             self.jsonData = jsonDataTemp
             self.tableView.reloadData()
+            
+            
+            
             
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             

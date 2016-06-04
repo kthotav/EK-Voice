@@ -8,6 +8,7 @@
 
 import UIKit
 import PagingMenuController
+import SwiftSpinner
 
 
 
@@ -22,19 +23,14 @@ class ContactsNotesViewController: UIViewController, PagingMenuControllerDelegat
     let grayColor = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 0.1)
     let grayColor2 = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 0.0)
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
+
         
         self.title = clientInfo["last_name"] as? String
-        
-//        let contactsTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContactsTableViewController") as! ContactsTableViewController
-//        contactsTableViewController.contactsID = rowID
-//        contactsTableViewController.contactsInfo = clientInfo
-//        contactsTableViewController.title = "Contacts"
-        
+
         
         let mainTableController = self.storyboard?.instantiateViewControllerWithIdentifier("MainTableViewController") as! MainTableViewController
         mainTableController.contactsID = rowID
@@ -68,7 +64,9 @@ class ContactsNotesViewController: UIViewController, PagingMenuControllerDelegat
         self.tabBarController?.tabBar.barTintColor = whiteColor
                 
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        SwiftSpinner.hide()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -88,6 +86,16 @@ class ContactsNotesViewController: UIViewController, PagingMenuControllerDelegat
         return UIStatusBarStyle.LightContent
     }
     
+   
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        
+        if segue.identifier == "addNote" {
+            SwiftSpinner.show("Loading...")
+        }
+    }
  
 }
 

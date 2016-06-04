@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 
 
@@ -24,6 +25,8 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         
@@ -136,6 +139,16 @@ class ContactsTableViewController: UITableViewController {
     
     override func  preferredStatusBarStyle()-> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        
+        if segue.identifier == "addNote" {
+            SwiftSpinner.show("Loading...")
+        }
     }
 
 }

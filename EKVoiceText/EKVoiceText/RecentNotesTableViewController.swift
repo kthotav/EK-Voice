@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftSpinner
 
 
 class RecentNotesTableViewController: UITableViewController {
@@ -127,11 +128,24 @@ class RecentNotesTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        /*
         if segue.identifier == "showNoteDetail" {
             let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
             let notesDetailViewController = segue.destinationViewController as! NotesdetailViewController
             
             notesDetailViewController.noteDetail = notes[indexPath.row]
+        }*/
+        
+        if segue.identifier == "showNoteDetail" {
+            let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
+            let notesDetailViewController = segue.destinationViewController as! AddNoteViewController
+            
+            notesDetailViewController.appendedNote = notes[indexPath.row]
+
+        }
+        
+        if segue.identifier == "addNote" {
+            SwiftSpinner.show("Loading...")
         }
         
     }
@@ -187,6 +201,8 @@ class RecentNotesTableViewController: UITableViewController {
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
+    
+  
 
 
 }

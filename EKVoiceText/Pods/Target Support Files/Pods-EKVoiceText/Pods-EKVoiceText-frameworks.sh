@@ -87,11 +87,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-EKVoiceText/Firebase.framework"
   install_framework "Pods-EKVoiceText/FoldingCell.framework"
   install_framework "Pods-EKVoiceText/PagingMenuController.framework"
+  install_framework "Pods-EKVoiceText/SwiftSpinner.framework"
   install_framework "Pods-EKVoiceText/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-EKVoiceText/Firebase.framework"
   install_framework "Pods-EKVoiceText/FoldingCell.framework"
   install_framework "Pods-EKVoiceText/PagingMenuController.framework"
+  install_framework "Pods-EKVoiceText/SwiftSpinner.framework"
   install_framework "Pods-EKVoiceText/SwiftyJSON.framework"
 fi

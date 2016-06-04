@@ -8,6 +8,7 @@ target 'EKVoiceText' do
    pod 'Firebase', '>= 2.5.1'
    pod "PagingMenuController"
    pod 'FoldingCell', '~> 0.8.1'
+   pod "SwiftSpinner"
 end
 
 target 'EKVoiceTextTests' do
