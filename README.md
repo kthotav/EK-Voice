@@ -67,7 +67,7 @@ Version: 1.0
 * **Robin Singh** - [TheSingh](https://github.com/TheSingh)
 * **George Azpeitia** - [GeorgeAzpeitia](https://github.com/GeorgeAzpeitia)
 * **Marcos Chabolla** - [MarcosChabolla](https://github.com/MarcosChabolla)
-* **Octavio Rodriguez - [octavio19](https://github.com/octavio19)
+* **Octavio Rodriguez** - [octavio19](https://github.com/octavio19)
 
 ## Acknowledgements
 
